@@ -1,0 +1,95 @@
+Verified Facts
+
+The test cases below are based only on the provided PRD and the supplied login-page screenshot, following the Anti-Hallucination Rules.
+
+The PRD requires email/password authentication, secure validation, session management, optional 2FA, and SSO.
+The PRD requires validation on blur, email-format validation, password-strength feedback, and clear authentication error messages.
+Forgot Password, password recovery, and password complexity are requirements.
+Responsive design, auto-focus, clickable labels, loading states, keyboard navigation, and screen-reader support are required.
+HTTPS, encrypted authentication transmission, secure session management, and rate limiting are required.
+The page should load within 2 seconds on standard connections.
+Successful authentication should transition the user to the VWO dashboard.
+The screenshot visibly shows Email, Password, Forgot Password, Remember Me, Sign in, Google, SSO, Passkey, Start a FREE TRIAL, Privacy Policy, Terms, and a Learn More button.
+
+The anti-hallucination rules specifically require that we do not invent behavior or assume unspecified system behavior.
+
+Generated Output — VWO Login Test Cases
+TC ID	Test Scenario	Preconditions	Test Steps	Test Data	Expected Result	Priority
+TC_LOGIN_001	Verify login page loads	User can access VWO login URL	Navigate to login page	VWO login URL	Login page should load successfully	High
+TC_LOGIN_002	Verify Email field is displayed	Login page loaded	Observe login form	N/A	Email input field should be available	High
+TC_LOGIN_003	Verify Password field is displayed	Login page loaded	Observe login form	N/A	Password input field should be available	High
+TC_LOGIN_004	Verify auto-focus on first input	Login page loaded	Observe cursor/focus after page load	N/A	First input field should receive automatic focus	Medium
+TC_LOGIN_005	Verify email accepts input	Login page loaded	Click Email field and enter email	user@example.com	Email value should be accepted in the field	High
+TC_LOGIN_006	Verify valid email format	Login page loaded	Enter valid email	user@example.com	Valid email format should pass validation	High
+TC_LOGIN_007	Verify invalid email format	Login page loaded	Enter invalid email and move focus away	userexample.com	Email format validation should be triggered	High
+TC_LOGIN_008	Verify validation on blur	Login page loaded	Enter invalid email → click outside field	Invalid email	Validation feedback should be provided on blur	High
+TC_LOGIN_009	Verify password accepts input	Login page loaded	Enter password	Password meeting configured requirements	Password should be accepted	High
+TC_LOGIN_010	Verify password strength feedback	Login page loaded	Enter password	Password value	Password-strength feedback should be provided as required by the PRD	Medium
+TC_LOGIN_011	Verify password complexity enforcement	Login page loaded	Enter password that does not meet configured requirements	Weak password	Password security requirements should be enforced	High
+TC_LOGIN_012	Verify password is protected during entry	Login page loaded	Enter password	Password	Password should not be exposed as plain text during normal entry	High
+TC_LOGIN_013	Verify login with valid credentials	Valid account exists	Enter valid email and password → select Sign in	Valid credentials	Authentication should succeed and transition to the VWO dashboard	Critical
+TC_LOGIN_014	Verify login with invalid credentials	Login page loaded	Enter invalid credentials → select Sign in	Invalid credentials	Authentication should fail and clear/actionable error messaging should be provided	Critical
+TC_LOGIN_015	Verify login with blank email	Login page loaded	Leave email blank → attempt login	Blank email	Login should not proceed; required validation should be provided if configured by the application	High
+TC_LOGIN_016	Verify login with blank password	Login page loaded	Enter email only → attempt login	Valid email	Login should not proceed; password validation should be provided if configured	High
+TC_LOGIN_017	Verify login with both fields blank	Login page loaded	Leave both fields blank → attempt login	Blank	Authentication should not succeed	High
+TC_LOGIN_018	Verify authentication loading state	Login page loaded	Submit authentication request	Valid/invalid credentials	Clear loading feedback should be displayed during authentication processing	Medium
+TC_LOGIN_019	Verify Forgot Password option	Login page loaded	Select Forgot Password	N/A	Forgot Password flow should be available	High
+TC_LOGIN_020	Verify password recovery	Password recovery flow available	Initiate password recovery	Registered email	Password recovery should support the required email-based recovery process	High
+TC_LOGIN_021	Verify Remember Me checkbox	Login page loaded	Select Remember Me	N/A	Remember Me option should be selectable	Medium
+TC_LOGIN_022	Verify remembered-login behavior	Valid account exists	Select Remember Me and authenticate	Valid credentials	Remembered-credentials/session behavior should operate according to the configured session requirements	Medium
+TC_LOGIN_023	Verify SSO option	Login page loaded	Observe SSO option	N/A	SSO capability should be available for organizational accounts	High
+TC_LOGIN_024	Verify enterprise SSO integration	Valid enterprise SSO configuration exists	Initiate SSO authentication	Enterprise account	Supported enterprise SSO authentication should be initiated	High
+TC_LOGIN_025	Verify optional 2FA	Account/configuration supports 2FA	Complete primary authentication	Valid credentials	If 2FA is enabled, the configured second authentication step should be supported	High
+TC_LOGIN_026	Verify keyboard navigation	Login page loaded	Navigate through controls using keyboard	N/A	All interactive elements should support keyboard navigation	High
+TC_LOGIN_027	Verify clickable form labels	Login page loaded	Select form labels	N/A	Form labels should provide the required accessible interaction	Medium
+TC_LOGIN_028	Verify screen-reader accessibility	Accessibility testing environment	Inspect/read login controls with screen reader	N/A	Login controls should provide required ARIA/accessibility support	High
+TC_LOGIN_029	Verify responsive login page	Login page loaded	Test supported mobile/device viewport	N/A	Login interface should be mobile optimized and touch-friendly	High
+TC_LOGIN_030	Verify theme support	Login page loaded	Check available theme functionality	N/A	Light/Dark Mode support should exist as specified in the PRD	Medium
+TC_LOGIN_031	Verify HTTPS enforcement	Application accessible	Inspect login communication	HTTPS URL	Login communication should use SSL/TLS encryption	Critical
+TC_LOGIN_032	Verify secure authentication transmission	Application accessible	Submit authentication data and inspect transmission	Test credentials	Authentication data transmission should be encrypted	Critical
+TC_LOGIN_033	Verify session security	Successful authentication available	Authenticate and inspect session handling	Valid credentials	Session tokens should be securely generated and managed	Critical
+TC_LOGIN_034	Verify rate limiting	Test environment configured for security testing	Send repeated authentication requests	Multiple requests	Brute-force protection through request throttling should be applied	Critical
+TC_LOGIN_035	Verify login page performance	Standard connection available	Load login page and measure load time	N/A	Page should load within 2 seconds on a standard connection	High
+TC_LOGIN_036	Verify successful login transition	Valid account exists	Log in successfully	Valid credentials	User should transition seamlessly to the main VWO dashboard	Critical
+TC_LOGIN_037	Verify login success/failure tracking	Analytics integration available	Perform successful and failed login attempts	Valid/invalid credentials	Login success/failure events should be tracked	Medium
+TC_LOGIN_038	Verify session timeout	Configured session timeout exists	Authenticate → remain inactive for configured period	Valid credentials	Session should be handled according to the configured timeout	High
+TC_LOGIN_039	Verify account recovery/support options after failure	Authentication failure occurs	Observe recovery/support options	Invalid credentials	Required recovery/support paths should be available	Medium
+TC_LOGIN_040	Verify successful login confirmation	Successful authentication	Complete login	Valid credentials	Clear indication of successful login completion should be provided	Medium
+Screenshot-specific test cases
+
+These are included because the screenshot itself is an approved source of information under the anti-hallucination rules.
+
+TC ID	Test Scenario	Expected Result	Priority
+TC_UI_001	Verify VWO/ABTasty branding	VWO and ABTasty branding visible on login page	Medium
+TC_UI_002	Verify Email placeholder	Enter email ID is displayed	Low
+TC_UI_003	Verify Password placeholder	Enter password is displayed	Low
+TC_UI_004	Verify Sign in button	Sign in button is visible	High
+TC_UI_005	Verify Forgot Password link	Forgot Password? is visible	High
+TC_UI_006	Verify Remember Me	Checkbox and Remember me label are visible	Medium
+TC_UI_007	Verify Google sign-in option	Sign in with Google is visible	Medium
+TC_UI_008	Verify SSO option	Sign in using SSO is visible	High
+TC_UI_009	Verify Passkey option	Sign in with Passkey is visible in the supplied screenshot	Medium
+TC_UI_010	Verify Free Trial option	Start a FREE TRIAL is visible	Medium
+TC_UI_011	Verify Privacy Policy and Terms	Privacy Policy and Terms text are visible	Low
+TC_UI_012	Verify Wingify announcement	Wingify transition announcement is visible	Low
+TC_UI_013	Verify Learn More button	Learn More button is visible	Low
+Missing / Unknown Information
+
+The following cannot be given a specific expected result without additional requirements:
+
+Exact email validation message.
+Exact password complexity rules.
+Exact password-strength levels.
+Exact authentication error message/code.
+Exact Remember Me duration.
+Exact session-timeout duration.
+Exact 2FA mechanism.
+Exact SSO provider/configuration for a particular organization.
+Exact Google/Passkey authentication behavior.
+Exact destination of the Learn More button.
+Exact Privacy Policy/Terms destination.
+Exact Free Trial registration flow.
+Browser/device compatibility matrix.
+Exact accessibility implementation/ARIA attributes.
+Exact analytics event names.
+Exact rate-limit threshold.

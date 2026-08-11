@@ -1,0 +1,89 @@
+
+PRD(2).docx
+Document
+Create test cases asper PRD attached
+
+Absolutely. I created the test cases strictly from the attached VWO Login Dashboard PRD, without adding functionality that is not specified in the PRD. The PRD covers authentication, validation, password recovery, UX, accessibility, security, performance, integrations, and user journeys. 
+
+
+VWO Login Dashboard – Test Cases
+TC ID	Test Scenario	Test Steps	Expected Result	Priority
+TC_LOGIN_001	Verify login page loads successfully	Navigate to VWO login page	Login page loads successfully	High
+TC_LOGIN_002	Verify email field is displayed	Open login page	Email input field is displayed	High
+TC_LOGIN_003	Verify password field is displayed	Open login page	Password input field is displayed	High
+TC_LOGIN_004	Login with valid email and password	Enter valid credentials and click Login	User is authenticated successfully	Critical
+TC_LOGIN_005	Login with invalid email	Enter invalid email and valid password	Appropriate validation/error message is displayed	High
+TC_LOGIN_006	Login with invalid password	Enter valid email and invalid password	Clear, actionable authentication error is displayed	High
+TC_LOGIN_007	Login with both fields empty	Click Login without entering credentials	Appropriate validation messages are displayed	High
+TC_LOGIN_008	Verify email validation on blur	Enter invalid email and move focus away	Email format validation is displayed immediately	High
+TC_LOGIN_009	Verify valid email format	Enter a valid email address	Email is accepted without validation error	High
+TC_LOGIN_010	Verify password requirements	Enter password	Password requirements/strength feedback is displayed as specified	High
+TC_LOGIN_011	Verify password is securely handled	Enter password	Password is not exposed in plain text during entry	High
+TC_LOGIN_012	Verify error message after failed authentication	Enter incorrect credentials	Clear and actionable error message is shown	High
+TC_LOGIN_013	Verify loading state during login	Enter valid credentials and submit	Clear loading/processing feedback is displayed	Medium
+TC_LOGIN_014	Verify successful login transition	Login with valid credentials	User is seamlessly redirected to the main VWO dashboard	Critical
+TC_LOGIN_015	Verify Remember Me option	Select Remember Me and login	Login/session is remembered according to the specified persistent-session behavior	High
+TC_LOGIN_016	Verify login without Remember Me	Leave Remember Me unchecked and login	Session does not use persistent remembered-login behavior	High
+TC_LOGIN_017	Verify Forgot Password option	Click Forgot Password	Password recovery flow is initiated	Critical
+TC_LOGIN_018	Verify password reset through email	Request password reset using registered email	Password reset email/recovery flow is provided	Critical
+TC_LOGIN_019	Verify password reset security	Request password reset	Secure reset token is generated and used for recovery	Critical
+TC_LOGIN_020	Verify password complexity enforcement	Attempt to set password that does not meet requirements	Password is rejected and requirements are communicated	High
+TC_LOGIN_021	Verify registration/free-trial link	Click registration/free-trial CTA	User is directed to the registration/free-trial path	High
+TC_LOGIN_022	Verify auto-focus	Open login page	First input field automatically receives focus	Medium
+TC_LOGIN_023	Verify clickable labels	Click email/password field labels	Corresponding input field receives focus	Medium
+TC_LOGIN_024	Verify keyboard navigation	Navigate page using Tab/keyboard	All interactive elements can be accessed using keyboard	High
+TC_LOGIN_025	Verify screen-reader support	Use screen reader on login page	Form controls have appropriate ARIA labels/accessibility support	High
+TC_LOGIN_026	Verify high-contrast accessibility	Enable high-contrast mode	Login interface remains usable for visually impaired users	High
+TC_LOGIN_027	Verify responsive login page	Open login page on mobile-sized viewport	Interface adapts correctly to mobile screen	High
+TC_LOGIN_028	Verify touch-friendly controls	Access login page on touch device/viewport	Controls are usable with touch interaction	Medium
+TC_LOGIN_029	Verify Light Mode	Select/use Light Mode	Login page is displayed correctly in Light Mode	Medium
+TC_LOGIN_030	Verify Dark Mode	Select/use Dark Mode	Login page is displayed correctly in Dark Mode	Medium
+TC_LOGIN_031	Verify VWO branding	Open login page	VWO branding/design system is consistently applied	Medium
+TC_LOGIN_032	Verify HTTPS enforcement	Access login page and inspect connection	Login communication occurs through HTTPS/SSL/TLS	Critical
+TC_LOGIN_033	Verify authentication data protection	Submit login credentials	Authentication data is securely transmitted/encrypted	Critical
+TC_LOGIN_034	Verify session token security	Successfully authenticate	Secure session token is generated and managed	Critical
+TC_LOGIN_035	Verify session timeout	Authenticate and remain inactive for configured timeout	Session expires according to configured timeout	High
+TC_LOGIN_036	Verify brute-force protection	Perform repeated failed login attempts	Request throttling/rate limiting protects against brute-force attempts	Critical
+TC_LOGIN_037	Verify SSO capability	Authenticate using supported enterprise SSO	Enterprise SSO authentication works for supported organizational accounts	High
+TC_LOGIN_038	Verify SAML authentication integration	Use supported SAML-based authentication	Authentication is processed successfully	High
+TC_LOGIN_039	Verify OAuth authentication integration	Use supported OAuth authentication	Authentication is processed successfully	High
+TC_LOGIN_040	Verify social login capability	Use supported identity provider	Social authentication works where enabled	Medium
+TC_LOGIN_041	Verify login success tracking	Perform successful login	Login success is captured for analytics/optimization	Medium
+TC_LOGIN_042	Verify login failure tracking	Perform failed login	Login failure is captured for analytics/optimization	Medium
+TC_LOGIN_043	Verify support integration	Use login assistance/support path	User can access the supported assistance mechanism	Medium
+TC_LOGIN_044	Verify page load performance	Load login page on standard connection	Page loads within 2 seconds	Critical
+TC_LOGIN_045	Verify concurrent login handling	Simulate thousands of simultaneous login attempts	System supports the specified concurrent login load	Critical
+TC_LOGIN_046	Verify availability	Access login functionality during normal operation	System meets the stated 99.9% availability target	High
+TC_LOGIN_047	Verify session/context preservation	Login after previous session/activity	Relevant previous-session context is preserved as specified	Medium
+TC_LOGIN_048	Verify successful login confirmation	Submit valid credentials	Clear indication of successful login is provided	High
+TC_LOGIN_049	Verify recovery after authentication failure	Enter invalid credentials	User receives error information and recovery/support options	High
+TC_LOGIN_050	Verify WCAG 2.1 AA compliance	Perform accessibility validation	Login interface meets WCAG 2.1 AA requirements	Critical
+TC_LOGIN_051	Verify GDPR data handling	Perform authentication/data operations	User data handling complies with GDPR requirements	Critical
+TC_LOGIN_052	Verify CCPA data handling	Perform authentication/data operations	User data handling complies with CCPA requirements	Critical
+TC_LOGIN_053	Verify OWASP authentication security	Execute authentication security checks	Authentication follows applicable OWASP authentication guidelines	Critical
+TC_LOGIN_054	Verify unauthorized session protection	Attempt to access protected functionality without valid authentication	Unauthorized access is prevented	Critical
+TC_LOGIN_055	Verify authentication under traffic spike	Generate high login traffic	Infrastructure handles traffic spikes through scaling mechanisms	High
+Requirement coverage
+The test cases above map to the PRD's major areas:
+
+Authentication & validation: TC_LOGIN_001–020 — the PRD specifies email/password authentication, validation on blur, email-format validation, password-strength feedback, and authentication errors. 
+
+
+UX & accessibility: TC_LOGIN_022–031 — auto-focus, clickable labels, loading states, responsive design, ARIA/keyboard support, high contrast, and themes are explicitly required. 
+
+
+Security: TC_LOGIN_032–040 and TC_LOGIN_051–054 — HTTPS, encryption, secure sessions, rate limiting, SSO, and security/compliance requirements are specified. 
+
+
+Performance & scalability: TC_LOGIN_044–046 and TC_LOGIN_055 — the PRD specifies sub-2-second loading, 99.9% availability, and support for thousands of simultaneous login attempts. 
+
+
+Integration & user journey: TC_LOGIN_014, 037–043 and 047–049 — dashboard transition, analytics, support, SSO/social integrations, remembered credentials, and error recovery are covered. 
+
+
+Note: Biometric authentication, adaptive authentication, PWA functionality, advanced personalization, and some analytics enhancements are explicitly listed as future enhancements in the PRD, so I have not treated them as current core-login test cases. 
+
+
+If you want, I can next convert these into an Excel/Jira-ready test case format with columns such as Test Case ID, Requirement ID, Module, Preconditions, Test Data, Steps, Expected Result, Priority, Severity, Type, and Status.
+
+
