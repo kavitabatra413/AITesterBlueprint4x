@@ -1,0 +1,17 @@
+{
+  "name": "rice-pot-playwright-adv-framework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^20.14.12",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.5.4"
+  }
+}
