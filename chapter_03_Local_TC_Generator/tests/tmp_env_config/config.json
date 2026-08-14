@@ -1,0 +1,1 @@
+{"jira_base": "https://saved.example.com", "jira_user": "saved.user@example.com", "jira_token": "saved-token", "groq_api_key": "saved-groq-key", "ollama_url": "http://saved-host:11434", "ollama_model": "gemma3:1b"}
