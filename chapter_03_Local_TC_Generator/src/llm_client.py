@@ -42,9 +42,9 @@ def check_groq():
     if not key:
         return False
     try:
-        url = "https://api.groq.ai/v1/models"
+        url = "https://api.groq.com/openai/v1/models"
         resp = requests.get(url, headers={"Authorization": f"Bearer {key}"}, timeout=5)
-        return resp.status_code in (200, 401)
+        return resp.status_code == 200
     except Exception:
         return False
 
@@ -86,16 +86,20 @@ def generate(prompt: str, timeout=180):
     if not key:
         return "Groq selected but GROQ_API_KEY not set"
     try:
-        url = "https://api.groq.ai/v1/generate"
+        url = "https://api.groq.com/openai/v1/chat/completions"
         headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-        body = {"model": "llama-3.1-8b-instant", "input": prompt}
+        body = {
+            "model": "llama-3.1-8b-instant",
+            "messages": [{"role": "user", "content": prompt}],
+        }
         resp = requests.post(url, json=body, headers=headers, timeout=timeout)
         resp.raise_for_status()
         j = resp.json()
-        if "output" in j:
-            return j.get("output")
         if "choices" in j:
-            return "\n".join([c.get("text", "") for c in j.get("choices", [])])
+            return "\n".join(
+                c.get("message", {}).get("content", c.get("text", ""))
+                for c in j.get("choices", [])
+            )
         return str(j)
     except Exception as e:
         return f"LLM generation failed: {e}"
