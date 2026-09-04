@@ -1,0 +1,150 @@
+{
+  "name": "01_FetchJiraTicket_AIAgent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -272,
+        -176
+      ],
+      "id": "bd479511-1ee9-42ed-9e09-5d32de462e1d",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -304,
+        16
+      ],
+      "id": "2b50427c-cd16-4cef-a7f3-f42fce3b81c7",
+      "name": "Brain",
+      "credentials": {
+        "openAiApi": {
+          "id": "WHNDI0Euub57KZcI",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        -176,
+        128
+      ],
+      "id": "30baf19f-bb9e-47df-893b-00c53c0f3eb7",
+      "name": "Memory"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "issueKey": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Issue_Key', ``, 'string') }}",
+        "simplifyOutput": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Simplify', ``, 'boolean') }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.jiraTool",
+      "typeVersion": 1,
+      "position": [
+        0,
+        48
+      ],
+      "id": "ef584e82-402b-4369-8a5f-de9d3c20f3ed",
+      "name": "Get an issue in Jira Software",
+      "credentials": {
+        "jiraSoftwareCloudApi": {
+          "id": "lIAMP5LmGXIy4EKG",
+          "name": "Jira SW Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -512,
+        -176
+      ],
+      "id": "2d15780f-7b2e-4f0b-9fcf-aa21a8c2be48",
+      "name": "When chat message received",
+      "webhookId": "34c94fce-d2f6-4e98-803c-2c855debad09"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Brain": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get an issue in Jira Software": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "cd000555-019d-496c-9e9f-2f6b7228c841",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a0df0cfff966466e6df5ea33ba75507947fb9f6cbba595b8ce4585a9f7ff52a3"
+  },
+  "nodeGroups": [],
+  "id": "3koyF8ZSA4FNXkLR",
+  "tags": []
+}

@@ -1,0 +1,164 @@
+{
+  "name": "03_CreatetestPlan_AIAgent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a Senior QA/Test Lead responsible for creating a comprehensive Test Plan.\nBased on the requirements, documents, files, or information provided by the user, analyze the application scope and create a professional Test Plan.\nThe Test Plan should include, wherever applicable:\n1.\tTest Plan Objective\n2.\tScope of Testing\no\tIn Scope\no\tOut of Scope\n3.\tTest Strategy\n4.\tTest Types\no\tFunctional Testing\no\tIntegration Testing\no\tAPI Testing\no\tUI Testing\no\tRegression Testing\no\tSmoke/Sanity Testing\no\tNegative Testing\no\tCompatibility Testing\no\tPerformance Testing\no\tSecurity Testing\no\tUsability Testing\n5.\tTest Environment\n6.\tTest Data Requirements\n7.\tEntry Criteria\n8.\tExit Criteria\n9.\tRoles and Responsibilities\n10.\tRisks and Mitigation\n11.\tDependencies\n12.\tAssumptions\n13.\tDefect Management Process\n14.\tRegression Strategy\n15.\tDeliverables\n16.\tTesting Tools\n17.\tTest Schedule/Milestones\n18.\tAI Testing considerations, if the application contains AI/ML functionality\nDo not invent requirements that are not present in the provided information. Create the Test Plan in a clear, professional and structured format\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -272,
+        -176
+      ],
+      "id": "6082e562-98c7-4e26-ab2b-fbcb2bb56630",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -304,
+        32
+      ],
+      "id": "53681cca-5522-40e4-8f30-bfa5ad8198be",
+      "name": "Brain",
+      "credentials": {
+        "openAiApi": {
+          "id": "WHNDI0Euub57KZcI",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        -176,
+        128
+      ],
+      "id": "cee3cf94-7220-4ecf-86e6-3604c67a28b9",
+      "name": "Memory"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -512,
+        -176
+      ],
+      "id": "dcc49bfe-7146-42bc-a112-36c25f118e19",
+      "name": "When chat message received",
+      "webhookId": "9cadf165-a1d4-4a76-90a0-3b0057877191"
+    },
+    {
+      "parameters": {
+        "project": {
+          "__rl": true,
+          "value": "10000",
+          "mode": "list",
+          "cachedResultName": "AwesomeQA"
+        },
+        "issueType": {
+          "__rl": true,
+          "value": "10004",
+          "mode": "list",
+          "cachedResultName": "Story"
+        },
+        "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}",
+        "additionalFields": {
+          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.jiraTool",
+      "typeVersion": 1,
+      "position": [
+        0,
+        48
+      ],
+      "id": "1f30514e-2b60-4ec3-a734-758a0317ccb2",
+      "name": "create test plan from User story",
+      "credentials": {
+        "jiraSoftwareCloudApi": {
+          "id": "lIAMP5LmGXIy4EKG",
+          "name": "Jira SW Cloud account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Brain": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create test plan from User story": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "fa56fafc-c18c-4fe5-8588-dca12c181c3c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a0df0cfff966466e6df5ea33ba75507947fb9f6cbba595b8ce4585a9f7ff52a3"
+  },
+  "nodeGroups": [],
+  "id": "fSRAaYn8V2FNUABj",
+  "tags": []
+}
