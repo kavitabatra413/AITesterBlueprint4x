@@ -139,8 +139,18 @@
     },
     {
       "parameters": {
-        "project": "10000",
-        "issueType": "10003",
+        "project": {
+          "__rl": true,
+          "value": "10000",
+          "mode": "list",
+          "cachedResultName": "AwesomeQA"
+        },
+        "issueType": {
+          "__rl": true,
+          "value": "10006",
+          "mode": "list",
+          "cachedResultName": "Bug"
+        },
         "summary": "={{ $json.summary }}",
         "additionalFields": {
           "description": "={{ $json.description }}",
@@ -339,7 +349,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "53eab5c2-d782-4013-9a05-c11d58d7c4d3",
+  "versionId": "aa15af46-4e63-4ff8-bd08-18534b6323e0",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "a0df0cfff966466e6df5ea33ba75507947fb9f6cbba595b8ce4585a9f7ff52a3"
