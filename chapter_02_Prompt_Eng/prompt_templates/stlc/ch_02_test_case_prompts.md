@@ -12,7 +12,7 @@
 
 ---
 
-## Template 1: Basic Test Case Generation
+## Template 1: Basic Test Case Generation  RTCFR
 
 ```
 ROLE: You are a Senior QA Engineer.
@@ -33,7 +33,7 @@ REQUIREMENTS:
 
 ---
 
-## Template 2: PRD to Test Cases (Comprehensive)
+## Template 2: PRD to Test Cases (Comprehensive) RTCFR
 
 ```
 ROLE: You are a Senior QA Engineer with 10+ years of experience.

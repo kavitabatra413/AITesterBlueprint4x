@@ -1,0 +1,130 @@
+{
+  "name": "04_CreateBugReport_AIAgent",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "screenshot-to-bug",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [-720, 0],
+      "id": "5e7f3c5e-6fd9-4b55-a21a-1fbb5af1b101",
+      "name": "Upload screenshot",
+      "webhookId": "c56e8c1a-6cd3-4f7b-90fd-a5f20e5d6f01"
+    },
+    {
+      "parameters": {
+        "jsCode": "const binary = $input.item.binary ?? {};\nconst screenshotField = Object.keys(binary).find((key) => binary[key].mimeType?.startsWith('image/'));\nif (!screenshotField) {\n  throw new Error('Upload an image in the multipart/form-data field named screenshot.');\n}\n\nconst screenshot = binary[screenshotField];\nconst imageBuffer = await this.helpers.getBinaryDataBuffer(0, screenshotField);\nconst imageDataUrl = `data:${screenshot.mimeType};base64,${imageBuffer.toString('base64')}`;\nconst errorLogs = $json.body?.errorLogs ?? $json.errorLogs ?? 'Not provided';\n\nreturn [{\n  json: {\n    openAiPayload: {\n      model: 'gpt-4o-mini',\n      temperature: 0.1,\n      response_format: { type: 'json_object' },\n      messages: [{\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: `You are a senior QA engineer. Analyze the UI screenshot and optional error logs below. Return only valid JSON with exactly these keys: summary (short bug title), description (a complete Jira-ready string containing Actual Result, Expected Result, Steps to Reproduce, Environment, Error Logs, and Evidence), priority (exactly one of Highest, High, Medium, Low, Lowest), labels (array of lowercase strings). Describe only evidence visible in the screenshot or present in the logs. Use Not specified when a detail is unavailable.\n\nError logs:\n${errorLogs}`\n          },\n          { type: 'image_url', image_url: { url: imageDataUrl, detail: 'high' } }\n        ]\n      }]\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-480, 0],
+      "id": "b70c0523-01d0-4fb8-99dd-6e07e0eab102",
+      "name": "Prepare screenshot and logs"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "={{ 'Bearer ' + $env.OPENAI_API_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.openAiPayload) }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-224, 0],
+      "id": "6eb6b89e-56c4-472d-9738-43bdd4e1a103",
+      "name": "OpenAI Vision"
+    },
+    {
+      "parameters": {
+        "jsCode": "const content = $json.choices?.[0]?.message?.content;\nif (!content) {\n  throw new Error('OpenAI Vision returned no bug report.');\n}\n\nconst jsonText = content.replace(/^```(?:json)?\\s*|\\s*```$/g, '').trim();\nlet report;\ntry {\n  report = JSON.parse(jsonText);\n} catch (error) {\n  throw new Error(`Structured bug report parsing failed: ${error.message}`);\n}\n\nconst validPriorities = ['Highest', 'High', 'Medium', 'Low', 'Lowest'];\nif (!report.summary || !report.description) {\n  throw new Error('The structured bug report must contain summary and description.');\n}\n\nreturn [{\n  json: {\n    summary: String(report.summary),\n    description: String(report.description),\n    priority: validPriorities.includes(report.priority) ? report.priority : 'Medium',\n    labels: Array.isArray(report.labels) && report.labels.length ? report.labels.map(String) : ['screenshot-reported']\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [32, 0],
+      "id": "03f54c3a-0d47-47d2-97d8-734eb5c60104",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "resource": "issue",
+        "operation": "create",
+        "project": "10000",
+        "issueType": "10006",
+        "summary": "={{ $json.summary }}",
+        "additionalFields": {
+          "description": "={{ $json.description }}",
+          "priority": "={{ $json.priority }}",
+          "labels": "={{ $json.labels.join(',') }}"
+        }
+      },
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1.1,
+      "position": [288, 0],
+      "id": "d4cd9490-0fb8-4db0-b13e-17df1138f105",
+      "name": "Create Jira Bug",
+      "credentials": {
+        "jiraSoftwareCloudApi": {
+          "id": "lIAMP5LmGXIy4EKG",
+          "name": "Jira SW Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { success: true, issueKey: $json.key, issueUrl: $json.self, message: 'Jira bug created successfully' } }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [544, 0],
+      "id": "0e53ba2a-fbf5-4c97-882b-262e0e2b9106",
+      "name": "Return Jira result"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Upload screenshot": {
+      "main": [[{ "node": "Prepare screenshot and logs", "type": "main", "index": 0 }]]
+    },
+    "Prepare screenshot and logs": {
+      "main": [[{ "node": "OpenAI Vision", "type": "main", "index": 0 }]]
+    },
+    "OpenAI Vision": {
+      "main": [[{ "node": "Structured Output Parser", "type": "main", "index": 0 }]]
+    },
+    "Structured Output Parser": {
+      "main": [[{ "node": "Create Jira Bug", "type": "main", "index": 0 }]]
+    },
+    "Create Jira Bug": {
+      "main": [[{ "node": "Return Jira result", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "7fdd4a45-59cc-40c9-92d8-f9e5f2ac6a01",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a0df0cfff966466e6df5ea33ba75507947fb9f6cbba595b8ce4585a9f7ff52a3"
+  },
+  "nodeGroups": [],
+  "id": "hTGBu2ZV3Q4MNPCL",
+  "tags": []
+}

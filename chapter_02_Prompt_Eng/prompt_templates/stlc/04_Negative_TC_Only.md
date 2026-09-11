@@ -1,4 +1,4 @@
-## Template 4: Negative Test Cases Only
+## Template 4: Negative Test Cases Only RTCFR
 ```
 ROLE: You are a QA Engineer focused on negative testing.
 

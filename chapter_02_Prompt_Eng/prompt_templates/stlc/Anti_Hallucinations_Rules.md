@@ -1,4 +1,4 @@
-# Anti-Hallucination Rules
+# Anti-Hallucination Rules SRPO (scope, role, process, output)
 
 - **Author:** Pramod Dutta
 - **Role:** Principal SDET
