@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "testId": "TC001",
+      "title": "Login with valid credentials",
+      "status": "passed"
+    },
+    {
+      "testId": "TC002",
+      "title": "Login with invalid password",
+      "status": "passed"
+    },
+    {
+      "testId": "TC003",
+      "title": "Logout successfully",
+      "status": "passed"
+    },
+    {
+      "testId": "TC004",
+      "title": "Search product",
+      "status": "passed"
+    },
+    {
+      "testId": "TC005",
+      "title": "Add product to cart",
+      "status": "passed"
+    },
+    {
+      "testId": "TC006",
+      "title": "Remove product from cart",
+      "status": "passed"
+    },
+    {
+      "testId": "TC007",
+      "title": "Checkout with valid card",
+      "status": "passed"
+    },
+    {
+      "testId": "TC008",
+      "title": "Checkout with expired card",
+      "status": "failed"
+    },
+    {
+      "testId": "TC009",
+      "title": "Apply discount coupon",
+      "status": "failed"
+    },
+    {
+      "testId": "TC010",
+      "title": "View order history",
+      "status": "failed"
+    }
+  ]
+}
