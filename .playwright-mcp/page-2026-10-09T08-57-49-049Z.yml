@@ -1,0 +1,268 @@
+- generic [ref=f49e1]:
+  - generic [ref=f49e4]:
+    - banner [ref=f49e5]:
+      - generic [ref=f49e6]:
+        - link [ref=f49e8] [cursor=pointer]:
+          - /url: https://modelcontextprotocol.io
+          - img "MCP" [ref=f49e9]
+        - heading "MCP Inspector" [level=2] [ref=f49e12]
+        - generic [ref=f49e13]:
+          - button "Client settings" [ref=f49e14] [cursor=pointer]
+          - button "Toggle color scheme" [ref=f49e19] [cursor=pointer]
+          - button "Close monitoring sidebar" [ref=f49e24] [cursor=pointer]
+    - main [ref=f49e29]:
+      - generic [ref=f49e30]:
+        - generic [ref=f49e34]:
+          - generic [ref=f49e35]:
+            - heading "Servers" [level=3] [ref=f49e36]
+            - generic [ref=f49e37]:
+              - button "Export" [ref=f49e38] [cursor=pointer]
+              - button "Add Servers" [ref=f49e41] [cursor=pointer]
+              - button "Collapse all" [ref=f49e47] [cursor=pointer]
+          - generic [ref=f49e56]:
+            - generic [ref=f49e58]:
+              - generic [ref=f49e61]:
+                - generic [ref=f49e62]:
+                  - generic [ref=f49e63]:
+                    - button "Reorder filesystem-server-default" [ref=f49e64]
+                    - paragraph [ref=f49e68]: filesystem-server-default
+                  - generic [ref=f49e69]:
+                    - paragraph [ref=f49e72]: Disconnected
+                    - generic [ref=f49e74]:
+                      - switch "Connect or disconnect \"filesystem-server-default\"" [ref=f49e75]
+                      - generic [aria-hidden] [ref=f49e76] [cursor=pointer]
+                - generic [ref=f49e79]:
+                  - generic [ref=f49e80]: STDIO
+                  - paragraph [ref=f49e82]: Standard I/O
+                - generic [ref=f49e84]:
+                  - generic "npx -y @modelcontextprotocol/server-filesystem /tmp" [ref=f49e85]
+                  - button "Copy" [ref=f49e87] [cursor=pointer]:
+                    - generic [ref=f49e88]: ⎘
+                - generic [ref=f49e89]:
+                  - generic [ref=f49e90]:
+                    - button "Clone" [ref=f49e91] [cursor=pointer]
+                    - button "Edit" [ref=f49e94] [cursor=pointer]
+                    - button "Remove" [ref=f49e97] [cursor=pointer]
+                  - button "Settings" [ref=f49e101] [cursor=pointer]
+              - generic [ref=f49e106]:
+                - generic [ref=f49e107]:
+                  - generic [ref=f49e108]:
+                    - button "Reorder everything-server-default" [ref=f49e109]
+                    - paragraph [ref=f49e113]: everything-server-default
+                  - generic [ref=f49e114]:
+                    - paragraph [ref=f49e117]: Disconnected
+                    - generic [ref=f49e119]:
+                      - switch "Connect or disconnect \"everything-server-default\"" [ref=f49e120]
+                      - generic [aria-hidden] [ref=f49e121] [cursor=pointer]
+                - generic [ref=f49e124]:
+                  - generic [ref=f49e125]: STDIO
+                  - paragraph [ref=f49e127]: Standard I/O
+                - generic [ref=f49e129]:
+                  - generic "npx -y @modelcontextprotocol/server-everything" [ref=f49e130]
+                  - button "Copy" [ref=f49e132] [cursor=pointer]:
+                    - generic [ref=f49e133]: ⎘
+                - generic [ref=f49e134]:
+                  - generic [ref=f49e135]:
+                    - button "Clone" [ref=f49e136] [cursor=pointer]
+                    - button "Edit" [ref=f49e139] [cursor=pointer]
+                    - button "Remove" [ref=f49e142] [cursor=pointer]
+                  - button "Settings" [ref=f49e146] [cursor=pointer]
+              - generic [ref=f49e151]:
+                - generic [ref=f49e152]:
+                  - generic [ref=f49e153]:
+                    - button "Reorder example-server-default" [ref=f49e154]
+                    - paragraph [ref=f49e158]: example-server-default
+                  - generic [ref=f49e159]:
+                    - paragraph [ref=f49e162]: Disconnected
+                    - generic [ref=f49e164]:
+                      - switch "Connect or disconnect \"example-server-default\"" [ref=f49e165]
+                      - generic [aria-hidden] [ref=f49e166] [cursor=pointer]
+                - generic [ref=f49e169]:
+                  - generic [ref=f49e170]: HTTP
+                  - paragraph [ref=f49e172]: Streamable HTTP
+                - generic [ref=f49e174]:
+                  - generic "https://example-server.modelcontextprotocol.io/mcp" [ref=f49e175]
+                  - button "Copy" [ref=f49e177] [cursor=pointer]:
+                    - generic [ref=f49e178]: ⎘
+                - generic [ref=f49e179]:
+                  - generic [ref=f49e180]:
+                    - button "Clone" [ref=f49e181] [cursor=pointer]
+                    - button "Edit" [ref=f49e184] [cursor=pointer]
+                    - button "Remove" [ref=f49e187] [cursor=pointer]
+                  - button "Settings" [ref=f49e191] [cursor=pointer]
+              - generic [ref=f49e196]:
+                - generic [ref=f49e197]:
+                  - generic [ref=f49e198]:
+                    - button "Reorder playwright" [ref=f49e199]
+                    - paragraph [ref=f49e203]: playwright
+                  - generic [ref=f49e204]:
+                    - paragraph [ref=f49e207]: Disconnected
+                    - generic [ref=f49e209]:
+                      - switch "Connect or disconnect \"playwright\"" [ref=f49e210]
+                      - generic [aria-hidden] [ref=f49e211] [cursor=pointer]
+                - generic [ref=f49e214]:
+                  - generic [ref=f49e215]: STDIO
+                  - paragraph [ref=f49e217]: Standard I/O
+                - generic [ref=f49e219]:
+                  - generic "npx -y @playwright/mcp@latest" [ref=f49e220]
+                  - button "Copy" [ref=f49e222] [cursor=pointer]:
+                    - generic [ref=f49e223]: ⎘
+                - generic [ref=f49e224]:
+                  - generic [ref=f49e225]:
+                    - button "Clone" [ref=f49e226] [cursor=pointer]
+                    - button "Edit" [ref=f49e229] [cursor=pointer]
+                    - button "Remove" [ref=f49e232] [cursor=pointer]
+                  - button "Settings" [ref=f49e236] [cursor=pointer]
+              - generic [ref=f49e241]:
+                - generic [ref=f49e242]:
+                  - generic [ref=f49e243]:
+                    - button "Reorder atlassian" [ref=f49e244]
+                    - paragraph [ref=f49e248]: atlassian
+                  - generic [ref=f49e249]:
+                    - paragraph [ref=f49e252]: Disconnected
+                    - generic [ref=f49e254]:
+                      - switch "Connect or disconnect \"atlassian\"" [ref=f49e255]
+                      - generic [aria-hidden] [ref=f49e256] [cursor=pointer]
+                - generic [ref=f49e259]:
+                  - generic [ref=f49e260]: HTTP
+                  - paragraph [ref=f49e262]: Streamable HTTP
+                - generic [ref=f49e264]:
+                  - generic "https://mcp.atlassian.com/v2/mcp" [ref=f49e265]
+                  - button "Copy" [ref=f49e267] [cursor=pointer]:
+                    - generic [ref=f49e268]: ⎘
+                - generic [ref=f49e269]:
+                  - generic [ref=f49e270]:
+                    - button "Clone" [ref=f49e271] [cursor=pointer]
+                    - button "Edit" [ref=f49e274] [cursor=pointer]
+                    - button "Remove" [ref=f49e277] [cursor=pointer]
+                  - button "Settings" [ref=f49e281] [cursor=pointer]
+              - generic [ref=f49e286]:
+                - generic [ref=f49e287]:
+                  - generic [ref=f49e288]:
+                    - button "Reorder selenium" [ref=f49e289]
+                    - paragraph [ref=f49e293]: selenium
+                  - generic [ref=f49e294]:
+                    - paragraph [ref=f49e297]: Disconnected
+                    - generic [ref=f49e299]:
+                      - switch "Connect or disconnect \"selenium\"" [ref=f49e300]
+                      - generic [aria-hidden] [ref=f49e301] [cursor=pointer]
+                - generic [ref=f49e304]:
+                  - generic [ref=f49e305]: STDIO
+                  - paragraph [ref=f49e307]: Standard I/O
+                - generic [ref=f49e309]:
+                  - generic "C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-mcp-venv\\Scripts\\python.exe -m mcp_server_selenium --port 9223 --user_data_dir C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-chrome-profile" [ref=f49e310]
+                  - button "Copy" [ref=f49e312] [cursor=pointer]:
+                    - generic [ref=f49e313]: ⎘
+                - generic [ref=f49e314]:
+                  - generic [ref=f49e315]:
+                    - button "Clone" [ref=f49e316] [cursor=pointer]
+                    - button "Edit" [ref=f49e319] [cursor=pointer]
+                    - button "Remove" [ref=f49e322] [cursor=pointer]
+                  - button "Settings" [ref=f49e326] [cursor=pointer]
+              - generic [ref=f49e331]:
+                - generic [ref=f49e332]:
+                  - generic [ref=f49e333]:
+                    - button "Reorder github" [ref=f49e334]
+                    - paragraph [ref=f49e338]: github
+                  - generic [ref=f49e339]:
+                    - paragraph [ref=f49e342]: Failed
+                    - generic [ref=f49e344]:
+                      - switch "Connect or disconnect \"github\"" [ref=f49e345]
+                      - generic [aria-hidden] [ref=f49e346] [cursor=pointer]
+                - generic [ref=f49e349]:
+                  - generic [ref=f49e350]: HTTP
+                  - paragraph [ref=f49e352]: Streamable HTTP
+                - generic [ref=f49e354]:
+                  - generic "https://api.githubcopilot.com/mcp/" [ref=f49e355]
+                  - button "Copy" [ref=f49e357] [cursor=pointer]:
+                    - generic [ref=f49e358]: ⎘
+                - generic [ref=f49e359]:
+                  - generic [ref=f49e360]:
+                    - button "Clone" [ref=f49e361] [cursor=pointer]
+                    - button "Edit" [ref=f49e364] [cursor=pointer]
+                    - button "Remove" [ref=f49e367] [cursor=pointer]
+                  - button "Settings" [ref=f49e371] [cursor=pointer]
+            - status [ref=f49e374]
+        - generic [ref=f49e377]:
+          - separator "Resize monitoring sidebar" [ref=f49e378]
+          - generic [ref=f49e380]:
+            - generic [ref=f49e381]:
+              - radiogroup "Monitoring screen" [ref=f49e382]:
+                - generic [ref=f49e384]:
+                  - radio "Network" [checked]
+                  - generic [ref=f49e385] [cursor=pointer]: Network
+              - textbox "Search" [ref=f49e388]:
+                - /placeholder: Search...
+            - generic [ref=f49e392]:
+              - generic [ref=f49e393]:
+                - heading "Requests (1)" [level=4] [ref=f49e394]
+                - generic [ref=f49e395]:
+                  - textbox "Network sort direction" [ref=f49e398] [cursor=pointer]: Newest First
+                  - button "Clear" [ref=f49e399] [cursor=pointer]
+                  - button "Export" [ref=f49e402] [cursor=pointer]
+                  - button "Expand all" [ref=f49e405] [cursor=pointer]
+              - generic [ref=f49e418]:
+                - generic [ref=f49e419]:
+                  - generic [ref=f49e420]:
+                    - paragraph [ref=f49e421]: 08:57:25
+                    - generic [ref=f49e422]: POST
+                    - generic [ref=f49e424]: transport
+                  - generic [ref=f49e426]:
+                    - paragraph [ref=f49e427]: 922ms
+                    - generic [ref=f49e428]: 401 Unauthorized
+                - generic [ref=f49e430]:
+                  - button "Copy" [ref=f49e431] [cursor=pointer]:
+                    - generic [ref=f49e432]: ⎘
+                  - paragraph [ref=f49e436]: https://api.githubcopilot.com/mcp/
+                  - button "Expand" [ref=f49e437] [cursor=pointer]
+    - contentinfo [ref=f49e441]:
+      - generic [ref=f49e442]:
+        - paragraph [ref=f49e443]: v2.10.1
+        - paragraph [ref=f49e444]: Copyright © Model Context Protocol a Series of LF Projects, LLC.
+  - dialog [ref=f49e456]:
+    - generic [ref=f49e461]:
+      - banner [ref=f49e462]:
+        - generic [ref=f49e463]:
+          - button "Expand all" [active] [ref=f49e464] [cursor=pointer]
+          - heading "Server Settings" [level=2] [ref=f49e468]
+          - button "Close" [ref=f49e469] [cursor=pointer]
+      - generic [ref=f49e473]:
+        - generic [ref=f49e474]:
+          - button "Options" [expanded] [ref=f49e475] [cursor=pointer]
+          - region "Options" [ref=f49e480]:
+            - generic [ref=f49e482]:
+              - generic [ref=f49e483]:
+                - generic [ref=f49e484]: Protocol Era
+                - paragraph [ref=f49e485]: Which MCP protocol era to negotiate with this server (independent of the transport). Legacy uses the 2025-11-25 initialize handshake; Auto probes server/discover and falls back to legacy; Modern pins the 2026-07-28 sessionless protocol. Defaults to Legacy — debugging tools should not auto-probe.
+                - textbox "Protocol Era" [ref=f49e487] [cursor=pointer]: Legacy (2025-11-25 handshake)
+              - generic [ref=f49e489]:
+                - checkbox "Auto Refresh on List Changed Notifications" [ref=f49e491] [cursor=pointer]
+                - generic [ref=f49e492] [cursor=pointer]:
+                  - generic [ref=f49e493]: Auto Refresh on List Changed Notifications
+                  - paragraph [ref=f49e494]: When checked, tool/prompt/resource lists refresh automatically when the server sends a */list_changed notification. When unchecked, the list-changed indicator appears and you refresh on demand.
+              - generic [ref=f49e496]:
+                - checkbox "Fetch Lists One Page at a Time" [ref=f49e498] [cursor=pointer]
+                - generic [ref=f49e499] [cursor=pointer]:
+                  - generic [ref=f49e500]: Fetch Lists One Page at a Time
+                  - paragraph [ref=f49e501]: When checked, the Tools, Resources, and Prompts lists load a single page and reveal a “Load next page” control instead of auto-loading every page. Useful defensively for servers with very large lists. The per-list sidebar toggle sets this too.
+              - generic [ref=f49e503]:
+                - checkbox "Suppress Notification Stream" [ref=f49e505] [cursor=pointer]
+                - generic [ref=f49e506] [cursor=pointer]:
+                  - generic [ref=f49e507]: Suppress Notification Stream
+                  - paragraph [ref=f49e508]: Legacy era only. When checked, the Inspector does not open the standalone GET notification stream after the initialize handshake. Server-to-client notifications that are not part of a request's own response — list changes, resource updates, standalone logs — will not arrive while this is on. Use it to test whether a server that answers initialize but then times out every request cannot serve a second concurrent request, and to inspect such a server anyway. Modern-era connections never open this stream and are unaffected. Takes effect on the next connect.
+              - generic [ref=f49e509]:
+                - generic [ref=f49e510]: Network Log Size
+                - paragraph [ref=f49e511]: Maximum number of HTTP requests kept in the Network log for this server. Older entries rotate out past this limit; a response body that arrives after its entry rotated out is dropped. Use 0 for unlimited (not recommended). Applies immediately to the active connection.
+                - generic [ref=f49e512]:
+                  - textbox "Network Log Size" [ref=f49e513]: "1000"
+                  - generic [ref=f49e515]:
+                    - button [aria-hidden] [ref=f49e516] [cursor=pointer]
+                    - button [aria-hidden] [ref=f49e519] [cursor=pointer]
+        - button "Advertised Extensions" [ref=f49e523] [cursor=pointer]
+        - button "Custom Headers" [ref=f49e529] [cursor=pointer]
+        - button "Request Metadata" [ref=f49e535] [cursor=pointer]
+        - button "Timeouts" [ref=f49e541] [cursor=pointer]
+        - button "Skills" [ref=f49e547] [cursor=pointer]
+        - button "Roots" [ref=f49e553] [cursor=pointer]
+        - button "OAuth Settings" [ref=f49e559] [cursor=pointer]
+      - paragraph [ref=f49e568]: "Secrets: OS keychain"

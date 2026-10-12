@@ -1,0 +1,48 @@
+- main "Application main content" [ref=f1e3]:
+  - generic [ref=f1e4]: ...
+  - generic [ref=f1e7]:
+    - generic [ref=f1e10]:
+      - img "Wingify" [ref=f1e12]
+      - paragraph [ref=f1e13]: Sign in to Wingify platform
+      - list [ref=f1e16]:
+        - listitem [ref=f1e17]:
+          - generic [ref=f1e18] [cursor=pointer]: Email address
+          - textbox "Email address" [active] [ref=f1e20]:
+            - /placeholder: Enter email ID
+        - listitem [ref=f1e21]:
+          - generic [ref=f1e22] [cursor=pointer]: Password
+          - generic [ref=f1e23]:
+            - textbox "Password" [ref=f1e24]:
+              - /placeholder: Enter password
+            - button "Toggle password visibility" [ref=f1e25] [cursor=pointer]
+        - listitem [ref=f1e27]:
+          - button "Forgot Password?" [ref=f1e28] [cursor=pointer]
+        - listitem [ref=f1e29]:
+          - generic [ref=f1e30]: Remember me
+        - listitem [ref=f1e35]:
+          - button "Sign in" [ref=f1e36] [cursor=pointer]
+        - listitem [ref=f1e38]:
+          - heading "Or" [level=6] [ref=f1e40]
+        - listitem [ref=f1e42]:
+          - button "Sign in with Google" [ref=f1e44] [cursor=pointer]
+        - listitem [ref=f1e49]:
+          - button "Sign in using SSO" [ref=f1e50] [cursor=pointer]
+        - listitem [ref=f1e53]:
+          - button "Sign in with Passkey" [ref=f1e54] [cursor=pointer]
+        - listitem [ref=f1e57]:
+          - text: Don't have an account?
+          - link "Start a free trial" [ref=f1e58] [cursor=pointer]:
+            - /url: https://wingify.com/free-trial/?utm_medium=website&utm_source=login-page&utm_campaign=mof_eg_loginpage
+        - listitem [ref=f1e59]:
+          - text: By continuing, you agree to Wingify's
+          - link "Privacy policy" [ref=f1e60] [cursor=pointer]:
+            - /url: https://wingify.com/privacy-policy/?utm_medium=app&utm_source=login-page&utm_campaign=legal_privacy_login
+          - text: "&"
+          - link "Terms" [ref=f1e61] [cursor=pointer]:
+            - /url: https://wingify.com/terms/?utm_medium=website&utm_source=login-page&utm_campaign=legal_terms_login
+          - text: .
+    - generic [ref=f1e63]:
+      - generic [ref=f1e64]:
+        - paragraph [ref=f1e65]: Agentic Experience Optimization Platform
+        - heading "Make every digital experience relevant" [level=1] [ref=f1e66]: Make everydigital experiencerelevant
+      - img "Wingify-logo" [ref=f1e67]

@@ -1,0 +1,5 @@
+[   99332ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:6274/:0
+[  133747ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:6274/:0
+[  272044ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://127.0.0.1:6274/api/mcp/send:0
+[  272090ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://127.0.0.1:6274/api/servers/events:0
+[  272090ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://127.0.0.1:6274/api/mcp/events?sessionId=32944dc5-643b-4212-8595-4ff5843d3f5d:0

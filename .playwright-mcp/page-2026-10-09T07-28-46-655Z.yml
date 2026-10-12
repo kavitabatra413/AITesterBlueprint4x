@@ -1,0 +1,61 @@
+- generic [ref=f1e9]:
+  - main [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - img "Atlassian" [ref=f1e12]
+      - heading "Log in to continue" [level=1] [ref=f1e17]
+    - generic [ref=f1e19]:
+      - generic [ref=f1e20]:
+        - generic [ref=f1e22]:
+          - generic [ref=f1e23]: Email*
+          - textbox "Email" [active] [ref=f1e25]:
+            - /placeholder: Enter your email
+        - generic [ref=f1e27]:
+          - generic [ref=f1e28]:
+            - checkbox "Remember me" [ref=f1e29]
+            - generic [ref=f1e30]: Remember me
+          - button [ref=f1e32] [cursor=pointer]:
+            - img "More info about Remember Me." [ref=f1e35]
+      - button "Continue" [ref=f1e36] [cursor=pointer]
+    - list [ref=f1e38]:
+      - text: "Or login with:"
+      - listitem [ref=f1e40]:
+        - button "Passkey" [ref=f1e41] [cursor=pointer]
+    - list [ref=f1e44]:
+      - text: "Or continue with:"
+      - generic [ref=f1e45]:
+        - listitem [ref=f1e46]:
+          - button "Google" [ref=f1e47] [cursor=pointer]
+        - listitem [ref=f1e50]:
+          - button "Microsoft" [ref=f1e51] [cursor=pointer]
+      - generic [ref=f1e54]:
+        - listitem [ref=f1e55]:
+          - button "Apple" [ref=f1e56] [cursor=pointer]
+        - listitem [ref=f1e59]:
+          - button "Slack" [ref=f1e60] [cursor=pointer]
+    - list [ref=f1e64]:
+      - listitem [ref=f1e65]:
+        - link "Can't log in?" [ref=f1e66] [cursor=pointer]:
+          - /url: /login/resetpassword?continue=https%3A%2F%2Fauth.atlassian.com%2Fauthorize%3Fresponse_type%3Dcode%26client_id%3DEbmQOFGIi45Udvh23KWznzUmN61emADs%26code_challenge%3DPq_srj8uzbKqyaNP3xTke2oHUTJ-rBy8Ryy0aY1dpWo%26code_challenge_method%3DS256%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%253A6284%252Foauth%252Fcallback%26state%3Db64aed49738abf37ef00f928e752a3f5c511de9c593dea79eb79dad9e042e36c%26scope%3Dread%253Ame%2520read%253Aaccount%2520offline_access%2520email%2520read%253Ajira%253Aagent-interface%2520write%253Ajira%253Aagent-interface%2520search%253Ajira%253Aagent-interface%2520delete%253Ajira%253Aagent-interface%2520manage%253Ajira%253Aagent-interface%2520read%253Aconfluence%253Aagent-interface%2520write%253Aconfluence%253Aagent-interface%2520search%253Aconfluence%253Aagent-interface%2520search%253Arovo%253Aagent-interface%2520search%253Acode%253Aagent-interface%2520read%253Aall%253Atwg%2520write%253Aall%253Atwg%2520read%253Agoals%253Aagent-interface%2520write%253Agoals%253Aagent-interface%2520read%253Aprojects%253Aagent-interface%2520write%253Aprojects%253Aagent-interface%2520read%253Abitbucket%253Aagent-interface%2520write%253Abitbucket%253Aagent-interface%2520read%253Aloom%253Aagent-interface%2520write%253Aloom%253Aagent-interface%2520read%253Atalent%253Aagent-interface%2520write%253Atalent%253Aagent-interface%2520read%253Ajira-align%253Aagent-interface%2520write%253Ajira-align%253Aagent-interface%2520read%253Ateams%253Aagent-interface%2520write%253Ateams%253Aagent-interface%2520read%253Aartifacts%253Aagent-interface%2520write%253Aartifacts%253Aagent-interface%2520read%253Acapacity-planning%253Aagent-interface%2520write%253Acapacity-planning%253Aagent-interface%2520read%253Afocus%253Aagent-interface%2520write%253Afocus%253Aagent-interface%2520read%253Aassets%253Aagent-interface%2520write%253Aassets%253Aagent-interface%26resource%3Dhttps%253A%252F%252Fmcp.atlassian.com%252Fv2%252Fmcp
+      - text: •
+      - listitem [ref=f1e67]:
+        - link "Create an account" [ref=f1e68] [cursor=pointer]:
+          - /url: /signup?continue=https%3A%2F%2Fauth.atlassian.com%2Fauthorize%3Fresponse_type%3Dcode%26client_id%3DEbmQOFGIi45Udvh23KWznzUmN61emADs%26code_challenge%3DPq_srj8uzbKqyaNP3xTke2oHUTJ-rBy8Ryy0aY1dpWo%26code_challenge_method%3DS256%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%253A6284%252Foauth%252Fcallback%26state%3Db64aed49738abf37ef00f928e752a3f5c511de9c593dea79eb79dad9e042e36c%26scope%3Dread%253Ame%2520read%253Aaccount%2520offline_access%2520email%2520read%253Ajira%253Aagent-interface%2520write%253Ajira%253Aagent-interface%2520search%253Ajira%253Aagent-interface%2520delete%253Ajira%253Aagent-interface%2520manage%253Ajira%253Aagent-interface%2520read%253Aconfluence%253Aagent-interface%2520write%253Aconfluence%253Aagent-interface%2520search%253Aconfluence%253Aagent-interface%2520search%253Arovo%253Aagent-interface%2520search%253Acode%253Aagent-interface%2520read%253Aall%253Atwg%2520write%253Aall%253Atwg%2520read%253Agoals%253Aagent-interface%2520write%253Agoals%253Aagent-interface%2520read%253Aprojects%253Aagent-interface%2520write%253Aprojects%253Aagent-interface%2520read%253Abitbucket%253Aagent-interface%2520write%253Abitbucket%253Aagent-interface%2520read%253Aloom%253Aagent-interface%2520write%253Aloom%253Aagent-interface%2520read%253Atalent%253Aagent-interface%2520write%253Atalent%253Aagent-interface%2520read%253Ajira-align%253Aagent-interface%2520write%253Ajira-align%253Aagent-interface%2520read%253Ateams%253Aagent-interface%2520write%253Ateams%253Aagent-interface%2520read%253Aartifacts%253Aagent-interface%2520write%253Aartifacts%253Aagent-interface%2520read%253Acapacity-planning%253Aagent-interface%2520write%253Acapacity-planning%253Aagent-interface%2520read%253Afocus%253Aagent-interface%2520write%253Afocus%253Aagent-interface%2520read%253Aassets%253Aagent-interface%2520write%253Aassets%253Aagent-interface%26resource%3Dhttps%253A%252F%252Fmcp.atlassian.com%252Fv2%252Fmcp
+  - contentinfo [ref=f1e69]:
+    - generic [ref=f1e70]:
+      - img "Atlassian" [ref=f1e71]
+      - generic [ref=f1e75]:
+        - link "One account , (opens new window)" [ref=f1e76] [cursor=pointer]:
+          - /url: https://support.atlassian.com/atlassian-account/docs/what-is-an-atlassian-account/
+          - text: One account
+          - generic [ref=f1e80]: ", (opens new window)"
+        - text: for Jira, Confluence, Trello and more.
+    - list [ref=f1e81]:
+      - listitem [ref=f1e82]:
+        - link "Atlassian Privacy Policy , (opens new window)" [ref=f1e83] [cursor=pointer]:
+          - /url: https://www.atlassian.com/legal/privacy-policy
+          - text: Privacy Policy
+      - text: •
+      - listitem [ref=f1e87]:
+        - link "Atlassian User Notice , (opens new window)" [ref=f1e88] [cursor=pointer]:
+          - /url: https://www.atlassian.com/legal/user-notice
+          - text: User Notice

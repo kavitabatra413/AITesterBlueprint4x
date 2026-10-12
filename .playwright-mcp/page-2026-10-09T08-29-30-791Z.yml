@@ -1,0 +1,214 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: https://modelcontextprotocol.io
+          - img "MCP" [ref=e9]
+        - heading "MCP Inspector" [level=2] [ref=e12]
+        - generic [ref=e13]:
+          - button "Client settings" [ref=e14] [cursor=pointer]
+          - button "Toggle color scheme" [ref=e19] [cursor=pointer]
+    - main [ref=e24]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Servers" [level=3] [ref=e31]
+          - generic [ref=e32]:
+            - button "Export" [ref=e33] [cursor=pointer]
+            - button "Add Servers" [ref=e36] [cursor=pointer]
+            - button "Collapse all" [ref=e42] [cursor=pointer]
+        - generic [ref=e51]:
+          - generic [ref=e53]:
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - generic [ref=e58]:
+                  - button "Reorder filesystem-server-default" [ref=e59]
+                  - paragraph [ref=e63]: filesystem-server-default
+                - generic [ref=e64]:
+                  - paragraph [ref=e67]: Disconnected
+                  - generic [ref=e69]:
+                    - switch "Connect or disconnect \"filesystem-server-default\"" [ref=e70]
+                    - generic [aria-hidden] [ref=e71] [cursor=pointer]
+              - generic [ref=e74]:
+                - generic [ref=e75]: STDIO
+                - paragraph [ref=e77]: Standard I/O
+              - generic [ref=e79]:
+                - generic "npx -y @modelcontextprotocol/server-filesystem /tmp" [ref=e80]
+                - button "Copy" [ref=e82] [cursor=pointer]:
+                  - generic [ref=e83]: ⎘
+              - generic [ref=e84]:
+                - generic [ref=e85]:
+                  - button "Clone" [ref=e86] [cursor=pointer]
+                  - button "Edit" [ref=e89] [cursor=pointer]
+                  - button "Remove" [ref=e92] [cursor=pointer]
+                - button "Settings" [ref=e96] [cursor=pointer]
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]:
+                  - button "Reorder everything-server-default" [ref=e104]
+                  - paragraph [ref=e108]: everything-server-default
+                - generic [ref=e109]:
+                  - paragraph [ref=e112]: Disconnected
+                  - generic [ref=e114]:
+                    - switch "Connect or disconnect \"everything-server-default\"" [ref=e115]
+                    - generic [aria-hidden] [ref=e116] [cursor=pointer]
+              - generic [ref=e119]:
+                - generic [ref=e120]: STDIO
+                - paragraph [ref=e122]: Standard I/O
+              - generic [ref=e124]:
+                - generic "npx -y @modelcontextprotocol/server-everything" [ref=e125]
+                - button "Copy" [ref=e127] [cursor=pointer]:
+                  - generic [ref=e128]: ⎘
+              - generic [ref=e129]:
+                - generic [ref=e130]:
+                  - button "Clone" [ref=e131] [cursor=pointer]
+                  - button "Edit" [ref=e134] [cursor=pointer]
+                  - button "Remove" [ref=e137] [cursor=pointer]
+                - button "Settings" [ref=e141] [cursor=pointer]
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - button "Reorder example-server-default" [ref=e149]
+                  - paragraph [ref=e153]: example-server-default
+                - generic [ref=e154]:
+                  - paragraph [ref=e157]: Disconnected
+                  - generic [ref=e159]:
+                    - switch "Connect or disconnect \"example-server-default\"" [ref=e160]
+                    - generic [aria-hidden] [ref=e161] [cursor=pointer]
+              - generic [ref=e164]:
+                - generic [ref=e165]: HTTP
+                - paragraph [ref=e167]: Streamable HTTP
+              - generic [ref=e169]:
+                - generic "https://example-server.modelcontextprotocol.io/mcp" [ref=e170]
+                - button "Copy" [ref=e172] [cursor=pointer]:
+                  - generic [ref=e173]: ⎘
+              - generic [ref=e174]:
+                - generic [ref=e175]:
+                  - button "Clone" [ref=e176] [cursor=pointer]
+                  - button "Edit" [ref=e179] [cursor=pointer]
+                  - button "Remove" [ref=e182] [cursor=pointer]
+                - button "Settings" [ref=e186] [cursor=pointer]
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - generic [ref=e193]:
+                  - button "Reorder playwright" [ref=e194]
+                  - paragraph [ref=e198]: playwright
+                - generic [ref=e199]:
+                  - paragraph [ref=e202]: Disconnected
+                  - generic [ref=e204]:
+                    - switch "Connect or disconnect \"playwright\"" [ref=e205]
+                    - generic [aria-hidden] [ref=e206] [cursor=pointer]
+              - generic [ref=e209]:
+                - generic [ref=e210]: STDIO
+                - paragraph [ref=e212]: Standard I/O
+              - generic [ref=e214]:
+                - generic "npx -y @playwright/mcp@latest" [ref=e215]
+                - button "Copy" [ref=e217] [cursor=pointer]:
+                  - generic [ref=e218]: ⎘
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - button "Clone" [ref=e221] [cursor=pointer]
+                  - button "Edit" [ref=e224] [cursor=pointer]
+                  - button "Remove" [ref=e227] [cursor=pointer]
+                - button "Settings" [ref=e231] [cursor=pointer]
+            - generic [ref=e236]:
+              - generic [ref=e237]:
+                - generic [ref=e238]:
+                  - button "Reorder atlassian" [ref=e239]
+                  - paragraph [ref=e243]: atlassian
+                - generic [ref=e244]:
+                  - paragraph [ref=e247]: Disconnected
+                  - generic [ref=e249]:
+                    - switch "Connect or disconnect \"atlassian\"" [ref=e250]
+                    - generic [aria-hidden] [ref=e251] [cursor=pointer]
+              - generic [ref=e254]:
+                - generic [ref=e255]: HTTP
+                - paragraph [ref=e257]: Streamable HTTP
+              - generic [ref=e259]:
+                - generic "https://mcp.atlassian.com/v2/mcp" [ref=e260]
+                - button "Copy" [ref=e262] [cursor=pointer]:
+                  - generic [ref=e263]: ⎘
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - button "Clone" [ref=e266] [cursor=pointer]
+                  - button "Edit" [ref=e269] [cursor=pointer]
+                  - button "Remove" [ref=e272] [cursor=pointer]
+                - button "Settings" [ref=e276] [cursor=pointer]
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - generic [ref=e416]:
+                  - button "Reorder selenium" [ref=e417]
+                  - paragraph [ref=e421]: selenium
+                - generic [ref=e422]:
+                  - paragraph [ref=e425]: Disconnected
+                  - generic [ref=e427]:
+                    - switch "Connect or disconnect \"selenium\"" [ref=e428]
+                    - generic [aria-hidden] [ref=e429] [cursor=pointer]
+              - generic [ref=e432]:
+                - generic [ref=e433]: STDIO
+                - paragraph [ref=e435]: Standard I/O
+              - generic [ref=e437]:
+                - generic "C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-mcp-venv\\Scripts\\python.exe -m mcp_server_selenium --port 9223 --user_data_dir C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-chrome-profile" [ref=e438]
+                - button "Copy" [ref=e440] [cursor=pointer]:
+                  - generic [ref=e441]: ⎘
+              - generic [ref=e442]:
+                - generic [ref=e443]:
+                  - button "Clone" [ref=e444] [cursor=pointer]
+                  - button "Edit" [ref=e447] [cursor=pointer]
+                  - button "Remove" [ref=e450] [cursor=pointer]
+                - button "Settings" [ref=e454] [cursor=pointer]
+          - status [ref=e279]
+    - contentinfo [ref=e280]:
+      - generic [ref=e281]:
+        - paragraph [ref=e282]: v2.10.1
+        - paragraph [ref=e283]: Copyright © Model Context Protocol a Series of LF Projects, LLC.
+  - dialog [ref=e348]:
+    - banner [ref=e349]:
+      - heading "Add server" [level=2] [ref=e350]
+      - button "Close" [ref=e351] [cursor=pointer]
+    - generic [ref=e354]:
+      - generic [ref=e355]:
+        - generic [ref=e356]:
+          - generic [ref=e357]:
+            - generic [ref=e358]: Server ID *
+            - paragraph [ref=e359]: Used as the key in mcp.json. Letters, numbers, hyphens, underscores.
+            - generic [ref=e360]:
+              - textbox "Server ID" [invalid] [ref=e361]:
+                - /placeholder: my-server
+                - text: selenium
+              - button "Clear" [ref=e397] [cursor=pointer]
+            - paragraph [ref=e457]: A server with this id already exists.
+          - generic [ref=e362]:
+            - generic [ref=e363]: Transport
+            - textbox "Transport" [ref=e365] [cursor=pointer]: stdio (local process)
+          - generic [ref=e366]:
+            - generic [ref=e367]: Command *
+            - generic [ref=e368]:
+              - textbox "Command" [ref=e369]:
+                - /placeholder: npx
+                - text: C:\Users\Kavita Batra\.copilot\session-state\1b6a212d-7e3d-4eb2-9322-cc6876c58289\files\selenium-mcp-venv\Scripts\python.exe
+              - button "Clear" [ref=e401] [cursor=pointer]
+          - generic [ref=e370]:
+            - generic [ref=e371]: Arguments
+            - paragraph [ref=e372]: One argument per line.
+            - generic [ref=e373]:
+              - textbox "Arguments" [ref=e374]:
+                - /placeholder: "-y\n@modelcontextprotocol/server-everything"
+                - text: "-m mcp_server_selenium --port 9223 --user_data_dir C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-chrome-profile"
+              - button "Clear" [ref=e405] [cursor=pointer]
+          - generic [ref=e375]:
+            - generic [ref=e376]: Environment
+            - paragraph [ref=e377]: KEY=VALUE per line.
+            - textbox "Environment" [ref=e379]:
+              - /placeholder: DEBUG=1
+          - generic [ref=e380]:
+            - generic [ref=e381]: Working directory
+            - generic [ref=e382]:
+              - textbox "Working directory" [ref=e383]:
+                - /placeholder: (inherit)
+                - text: C:\Users\Kavita Batra\.copilot\session-state\1b6a212d-7e3d-4eb2-9322-cc6876c58289\files
+              - button "Clear" [ref=e409] [cursor=pointer]
+        - generic [ref=e384]:
+          - button "Cancel" [ref=e385] [cursor=pointer]
+          - button "Add" [ref=e388] [cursor=pointer]
+      - paragraph [ref=e395]: "Secrets: OS keychain"

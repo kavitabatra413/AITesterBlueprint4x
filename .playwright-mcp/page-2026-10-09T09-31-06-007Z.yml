@@ -1,0 +1,289 @@
+- generic [ref=f14e4]:
+  - banner [ref=f14e5]:
+    - generic [ref=f14e6]:
+      - link [ref=f14e8] [cursor=pointer]:
+        - /url: https://modelcontextprotocol.io
+        - img "MCP" [ref=f14e9]
+      - heading "MCP Inspector" [level=2] [ref=f14e12]
+      - generic [ref=f14e13]:
+        - button "Client settings" [ref=f14e14] [cursor=pointer]
+        - button "Toggle color scheme" [ref=f14e19] [cursor=pointer]
+        - button "Close monitoring sidebar" [ref=f14e25] [cursor=pointer]
+  - main [ref=f14e30]:
+    - generic [ref=f14e31]:
+      - generic [ref=f14e35]:
+        - generic [ref=f14e36]:
+          - heading "Servers" [level=3] [ref=f14e37]
+          - generic [ref=f14e38]:
+            - button "Export" [ref=f14e39] [cursor=pointer]
+            - button "Add Servers" [ref=f14e42] [cursor=pointer]
+            - button "Collapse all" [ref=f14e48] [cursor=pointer]
+        - generic [ref=f14e57]:
+          - generic [ref=f14e59]:
+            - generic [ref=f14e62]:
+              - generic [ref=f14e63]:
+                - generic [ref=f14e64]:
+                  - button "Reorder filesystem-server-default" [ref=f14e65]
+                  - paragraph [ref=f14e69]: filesystem-server-default
+                - generic [ref=f14e70]:
+                  - paragraph [ref=f14e73]: Disconnected
+                  - generic [ref=f14e75]:
+                    - switch "Connect or disconnect \"filesystem-server-default\"" [ref=f14e76]
+                    - generic [aria-hidden] [ref=f14e77] [cursor=pointer]
+              - generic [ref=f14e80]:
+                - generic [ref=f14e81]: STDIO
+                - paragraph [ref=f14e83]: Standard I/O
+              - generic [ref=f14e85]:
+                - generic "npx -y @modelcontextprotocol/server-filesystem /tmp" [ref=f14e86]
+                - button "Copy" [ref=f14e88] [cursor=pointer]:
+                  - generic [ref=f14e89]: ⎘
+              - generic [ref=f14e90]:
+                - generic [ref=f14e91]:
+                  - button "Clone" [ref=f14e92] [cursor=pointer]
+                  - button "Edit" [ref=f14e95] [cursor=pointer]
+                  - button "Remove" [ref=f14e98] [cursor=pointer]
+                - button "Settings" [ref=f14e102] [cursor=pointer]
+            - generic [ref=f14e107]:
+              - generic [ref=f14e108]:
+                - generic [ref=f14e109]:
+                  - button "Reorder everything-server-default" [ref=f14e110]
+                  - paragraph [ref=f14e114]: everything-server-default
+                - generic [ref=f14e115]:
+                  - paragraph [ref=f14e118]: Disconnected
+                  - generic [ref=f14e120]:
+                    - switch "Connect or disconnect \"everything-server-default\"" [ref=f14e121]
+                    - generic [aria-hidden] [ref=f14e122] [cursor=pointer]
+              - generic [ref=f14e125]:
+                - generic [ref=f14e126]: STDIO
+                - paragraph [ref=f14e128]: Standard I/O
+              - generic [ref=f14e130]:
+                - generic "npx -y @modelcontextprotocol/server-everything" [ref=f14e131]
+                - button "Copy" [ref=f14e133] [cursor=pointer]:
+                  - generic [ref=f14e134]: ⎘
+              - generic [ref=f14e135]:
+                - generic [ref=f14e136]:
+                  - button "Clone" [ref=f14e137] [cursor=pointer]
+                  - button "Edit" [ref=f14e140] [cursor=pointer]
+                  - button "Remove" [ref=f14e143] [cursor=pointer]
+                - button "Settings" [ref=f14e147] [cursor=pointer]
+            - generic [ref=f14e152]:
+              - generic [ref=f14e153]:
+                - generic [ref=f14e154]:
+                  - button "Reorder example-server-default" [ref=f14e155]
+                  - paragraph [ref=f14e159]: example-server-default
+                - generic [ref=f14e160]:
+                  - paragraph [ref=f14e163]: Disconnected
+                  - generic [ref=f14e165]:
+                    - switch "Connect or disconnect \"example-server-default\"" [ref=f14e166]
+                    - generic [aria-hidden] [ref=f14e167] [cursor=pointer]
+              - generic [ref=f14e170]:
+                - generic [ref=f14e171]: HTTP
+                - paragraph [ref=f14e173]: Streamable HTTP
+              - generic [ref=f14e175]:
+                - generic "https://example-server.modelcontextprotocol.io/mcp" [ref=f14e176]
+                - button "Copy" [ref=f14e178] [cursor=pointer]:
+                  - generic [ref=f14e179]: ⎘
+              - generic [ref=f14e180]:
+                - generic [ref=f14e181]:
+                  - button "Clone" [ref=f14e182] [cursor=pointer]
+                  - button "Edit" [ref=f14e185] [cursor=pointer]
+                  - button "Remove" [ref=f14e188] [cursor=pointer]
+                - button "Settings" [ref=f14e192] [cursor=pointer]
+            - generic [ref=f14e197]:
+              - generic [ref=f14e198]:
+                - generic [ref=f14e199]:
+                  - button "Reorder playwright" [ref=f14e200]
+                  - paragraph [ref=f14e204]: playwright
+                - generic [ref=f14e205]:
+                  - paragraph [ref=f14e208]: Disconnected
+                  - generic [ref=f14e210]:
+                    - switch "Connect or disconnect \"playwright\"" [ref=f14e211]
+                    - generic [aria-hidden] [ref=f14e212] [cursor=pointer]
+              - generic [ref=f14e215]:
+                - generic [ref=f14e216]: STDIO
+                - paragraph [ref=f14e218]: Standard I/O
+              - generic [ref=f14e220]:
+                - generic "npx -y @playwright/mcp@latest" [ref=f14e221]
+                - button "Copy" [ref=f14e223] [cursor=pointer]:
+                  - generic [ref=f14e224]: ⎘
+              - generic [ref=f14e225]:
+                - generic [ref=f14e226]:
+                  - button "Clone" [ref=f14e227] [cursor=pointer]
+                  - button "Edit" [ref=f14e230] [cursor=pointer]
+                  - button "Remove" [ref=f14e233] [cursor=pointer]
+                - button "Settings" [ref=f14e237] [cursor=pointer]
+            - generic [ref=f14e242]:
+              - generic [ref=f14e243]:
+                - generic [ref=f14e244]:
+                  - button "Reorder atlassian" [ref=f14e245]
+                  - paragraph [ref=f14e249]: atlassian
+                - generic [ref=f14e250]:
+                  - paragraph [ref=f14e253]: Disconnected
+                  - generic [ref=f14e255]:
+                    - switch "Connect or disconnect \"atlassian\"" [ref=f14e256]
+                    - generic [aria-hidden] [ref=f14e257] [cursor=pointer]
+              - generic [ref=f14e260]:
+                - generic [ref=f14e261]: HTTP
+                - paragraph [ref=f14e263]: Streamable HTTP
+              - generic [ref=f14e265]:
+                - generic "https://mcp.atlassian.com/v2/mcp" [ref=f14e266]
+                - button "Copy" [ref=f14e268] [cursor=pointer]:
+                  - generic [ref=f14e269]: ⎘
+              - generic [ref=f14e270]:
+                - generic [ref=f14e271]:
+                  - button "Clone" [ref=f14e272] [cursor=pointer]
+                  - button "Edit" [ref=f14e275] [cursor=pointer]
+                  - button "Remove" [ref=f14e278] [cursor=pointer]
+                - button "Settings" [ref=f14e282] [cursor=pointer]
+            - generic [ref=f14e287]:
+              - generic [ref=f14e288]:
+                - generic [ref=f14e289]:
+                  - button "Reorder selenium" [ref=f14e290]
+                  - paragraph [ref=f14e294]: selenium
+                - generic [ref=f14e295]:
+                  - paragraph [ref=f14e298]: Disconnected
+                  - generic [ref=f14e300]:
+                    - switch "Connect or disconnect \"selenium\"" [ref=f14e301]
+                    - generic [aria-hidden] [ref=f14e302] [cursor=pointer]
+              - generic [ref=f14e305]:
+                - generic [ref=f14e306]: STDIO
+                - paragraph [ref=f14e308]: Standard I/O
+              - generic [ref=f14e310]:
+                - generic "C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-mcp-venv\\Scripts\\python.exe -m mcp_server_selenium --port 9223 --user_data_dir C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-chrome-profile" [ref=f14e311]
+                - button "Copy" [ref=f14e313] [cursor=pointer]:
+                  - generic [ref=f14e314]: ⎘
+              - generic [ref=f14e315]:
+                - generic [ref=f14e316]:
+                  - button "Clone" [ref=f14e317] [cursor=pointer]
+                  - button "Edit" [ref=f14e320] [cursor=pointer]
+                  - button "Remove" [ref=f14e323] [cursor=pointer]
+                - button "Settings" [ref=f14e327] [cursor=pointer]
+            - generic [ref=f14e332]:
+              - generic [ref=f14e333]:
+                - generic [ref=f14e334]:
+                  - button "Reorder github" [ref=f14e335]
+                  - paragraph [ref=f14e339]: github
+                - generic [ref=f14e340]:
+                  - paragraph [ref=f14e343]: Disconnected
+                  - generic [ref=f14e345]:
+                    - switch "Connect or disconnect \"github\"" [ref=f14e346]
+                    - generic [aria-hidden] [ref=f14e347] [cursor=pointer]
+              - generic [ref=f14e350]:
+                - generic [ref=f14e351]: HTTP
+                - paragraph [ref=f14e353]: Streamable HTTP
+              - generic [ref=f14e355]:
+                - generic "https://api.githubcopilot.com/mcp/" [ref=f14e356]
+                - button "Copy" [ref=f14e358] [cursor=pointer]:
+                  - generic [ref=f14e359]: ⎘
+              - generic [ref=f14e360]:
+                - generic [ref=f14e361]:
+                  - button "Clone" [ref=f14e362] [cursor=pointer]
+                  - button "Edit" [ref=f14e365] [cursor=pointer]
+                  - button "Remove" [ref=f14e368] [cursor=pointer]
+                - button "Settings" [ref=f14e372] [cursor=pointer]
+            - generic [ref=f14e377]:
+              - generic [ref=f14e378]:
+                - generic [ref=f14e379]:
+                  - button "Reorder figma" [ref=f14e380]
+                  - paragraph [ref=f14e384]: figma
+                - generic [ref=f14e385]:
+                  - paragraph [ref=f14e388]: Failed
+                  - generic [ref=f14e390]:
+                    - switch "Connect or disconnect \"figma\"" [ref=f14e391]
+                    - generic [aria-hidden] [ref=f14e392] [cursor=pointer]
+              - generic [ref=f14e395]:
+                - generic [ref=f14e396]: HTTP
+                - paragraph [ref=f14e398]: Streamable HTTP
+              - generic [ref=f14e400]:
+                - generic "https://mcp.figma.com/mcp" [ref=f14e401]
+                - button "Copy" [ref=f14e403] [cursor=pointer]:
+                  - generic [ref=f14e404]: ⎘
+              - generic [ref=f14e405]:
+                - generic [ref=f14e406]:
+                  - button "Clone" [ref=f14e407] [cursor=pointer]
+                  - button "Edit" [ref=f14e410] [cursor=pointer]
+                  - button "Remove" [ref=f14e413] [cursor=pointer]
+                - button "Settings" [ref=f14e417] [cursor=pointer]
+          - status [ref=f14e420]
+      - generic [ref=f14e421]:
+        - separator "Resize monitoring sidebar" [ref=f14e422]
+        - generic [ref=f14e424]:
+          - generic [ref=f14e425]:
+            - radiogroup "Monitoring screen" [ref=f14e426]:
+              - generic [ref=f14e428]:
+                - radio "Network" [checked]
+                - generic [ref=f14e429] [cursor=pointer]: Network
+            - textbox "Search" [ref=f14e432]:
+              - /placeholder: Search...
+          - generic [ref=f14e436]:
+            - generic [ref=f14e437]:
+              - heading "Requests (4)" [level=4] [ref=f14e438]
+              - generic [ref=f14e439]:
+                - textbox "Network sort direction" [ref=f14e442] [cursor=pointer]: Newest First
+                - button "Clear" [ref=f14e443] [cursor=pointer]
+                - button "Export" [ref=f14e446] [cursor=pointer]
+                - button "Expand all" [ref=f14e449] [cursor=pointer]
+            - generic [ref=f14e459]:
+              - generic [ref=f14e462]:
+                - generic [ref=f14e463]:
+                  - generic [ref=f14e464]:
+                    - paragraph [ref=f14e465]: 09:31:01
+                    - generic [ref=f14e466]: POST
+                    - generic [ref=f14e468]: auth
+                    - generic [ref=f14e470]: Registration
+                  - generic [ref=f14e472]:
+                    - paragraph [ref=f14e473]: 298ms
+                    - generic [ref=f14e474]: 403 Forbidden
+                - generic [ref=f14e476]:
+                  - button "Copy" [ref=f14e477] [cursor=pointer]:
+                    - generic [ref=f14e478]: ⎘
+                  - paragraph [ref=f14e482]: https://api.figma.com/v1/oauth/mcp/register
+                  - button "Expand" [ref=f14e483] [cursor=pointer]
+              - generic [ref=f14e489]:
+                - generic [ref=f14e490]:
+                  - generic [ref=f14e491]:
+                    - paragraph [ref=f14e492]: 09:31:00
+                    - generic [ref=f14e493]: GET
+                    - generic [ref=f14e495]: auth
+                    - generic [ref=f14e497]: Discovery
+                  - generic [ref=f14e499]:
+                    - paragraph [ref=f14e500]: 302ms
+                    - generic [ref=f14e501]: 200 OK
+                - generic [ref=f14e503]:
+                  - button "Copy" [ref=f14e504] [cursor=pointer]:
+                    - generic [ref=f14e505]: ⎘
+                  - paragraph [ref=f14e509]: https://api.figma.com/.well-known/oauth-authorization-server
+                  - button "Expand" [ref=f14e510] [cursor=pointer]
+              - generic [ref=f14e516]:
+                - generic [ref=f14e517]:
+                  - generic [ref=f14e518]:
+                    - paragraph [ref=f14e519]: 09:31:00
+                    - generic [ref=f14e520]: GET
+                    - generic [ref=f14e522]: auth
+                    - generic [ref=f14e524]: Discovery
+                  - generic [ref=f14e526]:
+                    - paragraph [ref=f14e527]: 409ms
+                    - generic [ref=f14e528]: 200 OK
+                - generic [ref=f14e530]:
+                  - button "Copy" [ref=f14e531] [cursor=pointer]:
+                    - generic [ref=f14e532]: ⎘
+                  - paragraph [ref=f14e536]: https://mcp.figma.com/.well-known/oauth-protected-resource
+                  - button "Expand" [ref=f14e537] [cursor=pointer]
+              - generic [ref=f14e543]:
+                - generic [ref=f14e544]:
+                  - generic [ref=f14e545]:
+                    - paragraph [ref=f14e546]: 09:30:59
+                    - generic [ref=f14e547]: POST
+                    - generic [ref=f14e549]: transport
+                  - generic [ref=f14e551]:
+                    - paragraph [ref=f14e552]: 307ms
+                    - generic [ref=f14e553]: 401 Unauthorized
+                - generic [ref=f14e555]:
+                  - button "Copy" [ref=f14e556] [cursor=pointer]:
+                    - generic [ref=f14e557]: ⎘
+                  - paragraph [ref=f14e561]: https://mcp.figma.com/mcp
+                  - button "Expand" [ref=f14e562] [cursor=pointer]
+  - contentinfo [ref=f14e566]:
+    - generic [ref=f14e567]:
+      - paragraph [ref=f14e568]: v2.10.1
+      - paragraph [ref=f14e569]: Copyright © Model Context Protocol a Series of LF Projects, LLC.

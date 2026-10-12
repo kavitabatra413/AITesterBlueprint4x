@@ -1,0 +1,220 @@
+- generic [ref=f1e4]:
+  - banner [ref=f1e5]:
+    - generic [ref=f1e6]:
+      - link [ref=f1e8] [cursor=pointer]:
+        - /url: https://modelcontextprotocol.io
+        - img "MCP" [ref=f1e9]
+      - heading "MCP Inspector" [level=2] [ref=f1e12]
+      - generic [ref=f1e13]:
+        - button "Client settings" [ref=f1e14] [cursor=pointer]
+        - button "Toggle color scheme" [ref=f1e19] [cursor=pointer]
+  - main [ref=f1e24]:
+    - generic [ref=f1e29]:
+      - generic [ref=f1e30]:
+        - heading "Servers" [level=3] [ref=f1e31]
+        - generic [ref=f1e32]:
+          - button "Export" [ref=f1e33] [cursor=pointer]
+          - button "Add Servers" [ref=f1e36] [cursor=pointer]
+          - button "Collapse all" [ref=f1e42] [cursor=pointer]
+      - generic [ref=f1e51]:
+        - generic [ref=f1e53]:
+          - generic [ref=f1e54]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Reorder filesystem-server-default"
+                    - paragraph: filesystem-server-default
+                  - generic:
+                    - generic:
+                      - paragraph: Disconnected
+                    - generic:
+                      - generic:
+                        - switch "Connect or disconnect \"filesystem-server-default\"" [disabled]
+                - generic:
+                  - generic: STDIO
+                  - paragraph: Standard I/O
+                - generic:
+                  - generic:
+                    - generic "npx -y @modelcontextprotocol/server-filesystem /tmp"
+                    - generic:
+                      - button "Copy" [disabled]:
+                        - generic: ⎘
+                - generic:
+                  - generic:
+                    - button "Clone" [disabled]
+                    - button "Edit" [disabled]
+                    - button "Remove" [disabled]
+                  - generic:
+                    - button "Settings" [disabled]
+          - generic [ref=f1e55]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Reorder everything-server-default"
+                    - paragraph: everything-server-default
+                  - generic:
+                    - generic:
+                      - paragraph: Disconnected
+                    - generic:
+                      - generic:
+                        - switch "Connect or disconnect \"everything-server-default\"" [disabled]
+                - generic:
+                  - generic: STDIO
+                  - paragraph: Standard I/O
+                - generic:
+                  - generic:
+                    - generic "npx -y @modelcontextprotocol/server-everything"
+                    - generic:
+                      - button "Copy" [disabled]:
+                        - generic: ⎘
+                - generic:
+                  - generic:
+                    - button "Clone" [disabled]
+                    - button "Edit" [disabled]
+                    - button "Remove" [disabled]
+                  - generic:
+                    - button "Settings" [disabled]
+          - generic [ref=f1e56]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Reorder example-server-default"
+                    - paragraph: example-server-default
+                  - generic:
+                    - generic:
+                      - paragraph: Disconnected
+                    - generic:
+                      - generic:
+                        - switch "Connect or disconnect \"example-server-default\"" [disabled]
+                - generic:
+                  - generic: HTTP
+                  - paragraph: Streamable HTTP
+                - generic:
+                  - generic:
+                    - generic "https://example-server.modelcontextprotocol.io/mcp"
+                    - generic:
+                      - button "Copy" [disabled]:
+                        - generic: ⎘
+                - generic:
+                  - generic:
+                    - button "Clone" [disabled]
+                    - button "Edit" [disabled]
+                    - button "Remove" [disabled]
+                  - generic:
+                    - button "Settings" [disabled]
+          - generic [ref=f1e57]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Reorder playwright"
+                    - paragraph: playwright
+                  - generic:
+                    - generic:
+                      - paragraph: Disconnected
+                    - generic:
+                      - generic:
+                        - switch "Connect or disconnect \"playwright\"" [disabled]
+                - generic:
+                  - generic: STDIO
+                  - paragraph: Standard I/O
+                - generic:
+                  - generic:
+                    - generic "npx -y @playwright/mcp@latest"
+                    - generic:
+                      - button "Copy" [disabled]:
+                        - generic: ⎘
+                - generic:
+                  - generic:
+                    - button "Clone" [disabled]
+                    - button "Edit" [disabled]
+                    - button "Remove" [disabled]
+                  - generic:
+                    - button "Settings" [disabled]
+          - generic [ref=f1e58]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Reorder atlassian"
+                    - paragraph: atlassian
+                  - generic:
+                    - generic:
+                      - paragraph: Disconnected
+                    - generic:
+                      - generic:
+                        - switch "Connect or disconnect \"atlassian\"" [disabled]
+                - generic:
+                  - generic: HTTP
+                  - paragraph: Streamable HTTP
+                - generic:
+                  - generic:
+                    - generic "https://mcp.atlassian.com/v2/mcp"
+                    - generic:
+                      - button "Copy" [disabled]:
+                        - generic: ⎘
+                - generic:
+                  - generic:
+                    - button "Clone" [disabled]
+                    - button "Edit" [disabled]
+                    - button "Remove" [disabled]
+                  - generic:
+                    - button "Settings" [disabled]
+          - generic [ref=f1e61]:
+            - generic [ref=f1e62]:
+              - generic [ref=f1e63]:
+                - button "Reorder selenium" [ref=f1e64]
+                - paragraph [ref=f1e68]: selenium
+              - generic [ref=f1e69]:
+                - paragraph [ref=f1e72]: Connecting...
+                - switch "Connect or disconnect \"selenium\"" [checked] [disabled] [ref=f1e75]
+            - generic [ref=f1e79]:
+              - generic [ref=f1e80]: STDIO
+              - paragraph [ref=f1e82]: Standard I/O
+            - generic [ref=f1e84]:
+              - generic "C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-mcp-venv\\Scripts\\python.exe -m mcp_server_selenium --port 9223 --user_data_dir C:\\Users\\Kavita Batra\\.copilot\\session-state\\1b6a212d-7e3d-4eb2-9322-cc6876c58289\\files\\selenium-chrome-profile" [ref=f1e85]
+              - button "Copy" [ref=f1e87] [cursor=pointer]:
+                - generic [ref=f1e88]: ⎘
+            - generic [ref=f1e89]:
+              - generic [ref=f1e90]:
+                - button "Clone" [ref=f1e91] [cursor=pointer]
+                - button "Edit" [ref=f1e94] [cursor=pointer]
+                - button "Remove" [ref=f1e97] [cursor=pointer]
+              - button "Settings" [ref=f1e101] [cursor=pointer]
+          - generic [ref=f1e104]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button "Reorder github"
+                    - paragraph: github
+                  - generic:
+                    - generic:
+                      - paragraph: Disconnected
+                    - generic:
+                      - generic:
+                        - switch "Connect or disconnect \"github\"" [disabled]
+                - generic:
+                  - generic: HTTP
+                  - paragraph: Streamable HTTP
+                - generic:
+                  - generic:
+                    - generic "https://api.githubcopilot.com/mcp/"
+                    - generic:
+                      - button "Copy" [disabled]:
+                        - generic: ⎘
+                - generic:
+                  - generic:
+                    - button "Clone" [disabled]
+                    - button "Edit" [disabled]
+                    - button "Remove" [disabled]
+                  - generic:
+                    - button "Settings" [disabled]
+        - status [ref=f1e105]
+  - contentinfo [ref=f1e106]:
+    - generic [ref=f1e107]:
+      - paragraph [ref=f1e108]: v2.10.1
+      - paragraph [ref=f1e109]: Copyright © Model Context Protocol a Series of LF Projects, LLC.

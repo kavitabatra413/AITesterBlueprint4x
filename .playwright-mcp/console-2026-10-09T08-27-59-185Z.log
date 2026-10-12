@@ -1,0 +1,6 @@
+[  924791ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:6284/?MCP_INSPECTOR_API_TOKEN=3bf5975793fcf6c82c64cba7095855e69f256767df8c23b3c78436bf7dbfe7a2:0
+[ 1272668ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://127.0.0.1:6284/api/mcp/events?sessionId=e7629f5e-ac68-4c21-9b50-4361f631528b:0
+[ 1272669ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://127.0.0.1:6284/api/servers/events:0
+[ 1640094ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:6284/api/servers/github:0
+[ 1640318ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:6284/api/config:0
+[ 1666952ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:6284/api/mcp/connect:0
