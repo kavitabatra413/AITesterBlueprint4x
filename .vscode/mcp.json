@@ -1,5 +1,5 @@
 {
-  "mcpServers": {
+  "servers": {
     "playwright": {
       "type": "stdio",
       "command": "npx",
