@@ -4,3 +4,6 @@ c = a + b
 print(c)
 c = c - 10
 print(c)
+
+#20
+#10

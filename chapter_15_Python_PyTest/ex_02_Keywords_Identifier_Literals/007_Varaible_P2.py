@@ -14,3 +14,14 @@ print(complex_number)
 print(complex_number.real)
 print(complex_number.imag)
 print(type(complex_number))
+
+# <class 'str'>
+# <class 'float'>
+# <class 'bool'>
+# (2+3j)
+# 2.0
+# 3.0
+# <class 'complex'>
+# Explanation:
+# complex_number.real returns the real part: 2.0
+# complex_number.imag returns the imaginary part: 3.0

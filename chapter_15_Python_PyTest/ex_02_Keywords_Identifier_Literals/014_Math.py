@@ -8,3 +8,7 @@ print(result_min)
 
 result = max(3, 4, 67, -1, 190, 999, 100000, 9899, -1)
 print(result)
+
+#101
+#3
+#100000

@@ -6,3 +6,6 @@ age = "Pramod"
 print(type(age))
 age = True
 print(type(age))
+# <class 'int'>
+# <class 'str'>
+# <class 'bool'>
