@@ -7,7 +7,7 @@ print(API_URLSs[1])
 my_tuple = ("tta.com", "sdet.live")
 print(my_tuple)
 my_api_list = list(my_tuple)
-
+print(my_api_list)
 
 shopping_list_wife = ["bread", "butter", "paneer"]
 shopping_list_wife[2] = "milk"
@@ -19,3 +19,11 @@ print(t)
 
 l = list()
 print(l)
+
+#https://sdet.live/python0x
+#https://awesomeqa.com
+#('tta.com', 'sdet.live')
+#['tta.com', 'sdet.live']
+#['bread', 'butter', 'milk']
+#()
+#[]

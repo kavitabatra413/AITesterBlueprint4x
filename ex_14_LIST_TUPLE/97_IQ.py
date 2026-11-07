@@ -11,3 +11,10 @@ print(max(numbers))  # 40
 print(min(numbers))  # 10
 print(sum(numbers))  # 120
 
+
+#1
+#2
+#6
+#40
+#10
+#120

@@ -5,3 +5,6 @@ my_tuple = ("tta.com", "sdet.live")
 print(my_tuple)
 my_api_list = list(my_tuple)
 print(my_api_list)
+
+#('tta.com', 'sdet.live')
+#['tta.com', 'sdet.live']

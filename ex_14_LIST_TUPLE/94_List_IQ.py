@@ -4,10 +4,13 @@ my_list[0] = "Pramod"
 my_list[1] = "Dutta"
 my_list[1] = "Dutta"
 
-print(my_list)
+print(my_list) #['Pramod', 'Dutta', 3]
 
 for element in my_list:
     print(element)
+    #Pramod
+   #Dutta
+   #3
 
 
 # range() this also return the list

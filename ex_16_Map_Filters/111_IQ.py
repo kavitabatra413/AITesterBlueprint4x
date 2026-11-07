@@ -5,4 +5,4 @@ def upper_case(string):
 
 
 upper_name_list = list(map(upper_case, name))
-print(upper_name_list)
+print(upper_name_list) #['PRAMOD', 'DUTTA', 'QA', 'LUCKY']
