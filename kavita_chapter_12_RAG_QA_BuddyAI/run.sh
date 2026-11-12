@@ -12,6 +12,7 @@ cd "$(dirname "$0")"
 
 PORT=$(grep -E '^PORT=' .env 2>/dev/null | cut -d= -f2 || true); PORT=${PORT:-8300}
 EMBED_MODEL=$(grep -E '^EMBED_MODEL=' .env 2>/dev/null | cut -d= -f2 || true); EMBED_MODEL=${EMBED_MODEL:-qwen3-embedding:4b}
+COLLECTION=$(grep -E '^QDRANT_COLLECTION=' .env 2>/dev/null | cut -d= -f2 || true); COLLECTION=${COLLECTION:-qabuddy}
 # PY=.venv/bin/python
 PY=.venv/Scripts/python.exe
 
@@ -52,14 +53,6 @@ python_env() {
   fi
 }
 
-fetch_repos() {
-  # Existing local framework copies are sufficient for code ingestion.
-  [ -d data/07_Source_Codes/ATB13xSeleniumAdvanceFramework ] && [ -d data/07_Source_Codes/AdvancePlaywrightFramework1x ] && return
-  echo "Fetching the framework repos (git submodules)…"
-  git submodule update --init -- data/07_Source_Codes ||
-    echo "Could not fetch them: clone both repos into data/07_Source_Codes/ (see README). Code questions will have no sources."
-}
-
 ui_build() {
   [ -f ui/dist/index.html ] && return
   (cd ui && npm install --silent && npm run build)
@@ -68,7 +61,7 @@ ui_build() {
 cmd=${1:-up}
 case "$cmd" in
   test)  python_env; exec "$PY" -m pytest -q tests ;;
-  ingest) fetch_repos; start_qdrant; start_ollama; python_env; shift; exec "$PY" -m qabuddy ingest "$@" ;;
+  ingest) start_qdrant; start_ollama; python_env; shift; exec "$PY" -m qabuddy ingest "$@" ;;
   eval)  start_qdrant; start_ollama; python_env; exec "$PY" -m qabuddy eval ;;
   ask)   start_qdrant; start_ollama; python_env; shift; exec "$PY" -m qabuddy ask "$@" ;;
   demo)
@@ -76,8 +69,8 @@ case "$cmd" in
     echo "Demo build -> ui/dist-demo (preview: python3 -m http.server 5310 -d ui/dist-demo). Deploy: vercel --prod"
     ;;
   up|*)
-    fetch_repos; start_qdrant; start_ollama; python_env; ui_build
-    points=$(curl -s localhost:6333/collections/qabuddy | "$PY" -c "import json,sys; print(json.load(sys.stdin).get('result',{}).get('points_count',0))" 2>/dev/null || echo 0)
+    start_qdrant; start_ollama; python_env; ui_build
+    points=$(curl -s "localhost:6333/collections/${COLLECTION}" | "$PY" -c "import json,sys; print(json.load(sys.stdin).get('result',{}).get('points_count',0))" 2>/dev/null || echo 0)
     if [ "${points:-0}" = "0" ]; then echo "Index is empty: ingesting (first run embeds everything, a few minutes)…"; "$PY" -m qabuddy ingest; fi
     echo "QABuddy -> http://localhost:${PORT}"
     (sleep 4 && (open "http://localhost:${PORT}" 2>/dev/null || xdg-open "http://localhost:${PORT}" 2>/dev/null || true)) &

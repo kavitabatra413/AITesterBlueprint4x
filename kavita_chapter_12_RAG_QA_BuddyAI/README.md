@@ -109,7 +109,7 @@ data/
 ├── 05_PRD_SRS_BRD_FRDs/     Product Requirements Document (PRD) VWO.com (real)
 ├── 06_Figma_Desings/        phase 2
 ├── 06_Jenkins_Logs/         builds #142, #143, #88 + JUnit XML (sample)
-└── 07_Source_Codes/         ATB13xSeleniumAdvanceFramework, AdvancePlaywrightFramework1x (real, git submodules)
+└── 07_Source_Codes/         ATB13xSeleniumAdvanceFramework, AdvancePlaywrightFramework1x (local copies)
 ```
 
 The **sample** files were generated so every chunker has data to test. They tell one
@@ -119,9 +119,9 @@ cross-source questions like "why did build #142 fail?" have a findable answer. E
 folder has a `_README_SAMPLE_DATA.md`; `_`-prefixed files are never ingested.
 `sources.yaml` maps each folder to its chunker: add a source there.
 
-The two framework repos are git submodules, pinned to the commits the index and the hosted
-demo were built from (code answers link to GitHub at those commits). Clone this repo with
-`git clone --recurse-submodules`, or let `./run.sh` fetch them.
+All ingestion reads files from these local `data/` folders. The framework folders under
+`data/07_Source_Codes/` are local copies; startup and ingestion do not fetch them from GitHub.
+To index code, place the framework files in those folders and run `./run.sh ingest`.
 
 ## Modes
 

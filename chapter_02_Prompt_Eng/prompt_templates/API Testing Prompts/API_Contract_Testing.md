@@ -12,7 +12,7 @@ VALIDATIONS:
 - Array bounds respected
 CONSTRAINTS:
 
-- Use exact schema from documentation
+- Use eom documentatioxact schema frn
 - Include positive and negative cases
 - Validate both success and error responses
 FORMAT:
