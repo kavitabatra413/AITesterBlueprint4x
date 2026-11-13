@@ -30,4 +30,6 @@ student_infor3 = {
 
 student_list = [student_infor1,student_infor2,student_infor3]
 print(student_list)
+#[{'name': 'Pramod', 'age': 67, 'address': {'home_address': 'ND', 'office_address': 'KA'}}, {'name': 'Amit', 'age': 69, 'address': {'home_address': 'GOA', 'office_address': 'KA'}}, {'name': 'Murthy', 'age': 120, 'address': {'home_address': 'PODI', 'office_address': 'vizag'}}]
 print(student_list[2]["address"]["office_address"])
+#vizag

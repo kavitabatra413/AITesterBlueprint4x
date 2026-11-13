@@ -10,13 +10,13 @@ class Person:
     address = None
 
 
-    # Behavriour
+    # Behaviour ie functions or methods
     def talk(self):  # self - this , self will be first argument in every behaviour.
         print("I can Talk")
 
     def sleep(self, name):  # Arg with No Return
         print("I am a Method!!")
-        print("Sleep", name)
+        print("Sleep", name) #Sleep Geeta
 
     def sleep2(self, name):  # Arg with Return
         print("I am a Method!!")
@@ -28,8 +28,6 @@ class Person:
     def method_walk_return(self):  # No Arg with Return
         return "I am walking"
 
-
-
 def function_outside():
     print("Outside")
 
@@ -37,3 +35,18 @@ def function_outside():
 geeta = Person()
 amit = Person()
 navita = Person()
+
+# Calling methods using objects
+geeta.talk()
+
+geeta.sleep("Geeta")
+
+geeta.sleep2("Geeta")
+
+geeta.walk()
+
+print(geeta.method_walk_return())
+
+function_outside()
+
+# run direct or python XXX.py

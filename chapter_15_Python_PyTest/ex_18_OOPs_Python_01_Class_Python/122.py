@@ -6,15 +6,18 @@ class Dog:
     weight = None
     # B
     def bark(self):
-        print("Barking")
+        print("Barking") #Barking
         # print(name)
-        print(self.name)
+        print(self.name)#None
 
     def talk(self):
-        print("Talking")
+        print("Talking") #Talking
 
 
 chow = Dog()
 
 # Dog() - Object
 # chow -> Object Ref
+
+chow.bark()
+chow.talk()
